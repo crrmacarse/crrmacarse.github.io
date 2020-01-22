@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{21:function(e,n,o){"use strict";o.r(n);var a=o(0),t=o.n(a);n.default=()=>t.a.createElement("div",null,"Portfolio Page")}}]);
-//# sourceMappingURL=4.3cbf5c202f16f9e25472.bundle.js.map

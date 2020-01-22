@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{20:function(e,n,a){"use strict";a.r(n);var o=a(0),t=a.n(o);n.default=()=>t.a.createElement("div",null,"Home PAGE")}}]);
-//# sourceMappingURL=3.3cbf5c202f16f9e25472.bundle.js.map
