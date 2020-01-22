@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/components/public/portfolio/index.tsx"],"names":[],"mappings":"yFAAA,2BAIe,UAFG,IAAM","file":"4.eb9581a3febbe28409bd.bundle.js","sourcesContent":["import React from 'react';\r\n\r\nconst Portfolio = () => <div>Portfolio Page</div>\r\n\r\nexport default Portfolio;"],"sourceRoot":""}
