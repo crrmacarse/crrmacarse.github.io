@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server --mode development --open --hot --profile --progress --colors",
+    "hot": "webpack-dev-server --open --hot --profile --progress --colors --config=./compiler/hot.js --env=hot",
+    "github-build": "webpack --profile --progress --config=./compiler/github-pages.js --env=github-pages",
+    "prod": "webpack --profile --progress --config=./compiler/production.js --env=production",
+    "analyze": "source-map-explorer './dist/*.js'",
     "test": "jest --coverage",
     "test-watch": "jest --verbose --watch",
     "test-update": "jest --updateSnapshot"
