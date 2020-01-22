@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { HashRouter as Router, Switch, Route } from 'react-router-dom' // @TODO Research more about BrowserRouter vs HashRouter
 import * as ROUTES from 'constants/routes'
 import BaseLoader from 'components/shared/loader/base'
 import Navbar from 'components/shared/navbar'
