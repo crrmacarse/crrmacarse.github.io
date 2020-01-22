@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/components/public/home/index.tsx"],"names":[],"mappings":"yFAAA,2BAIe,UAFF,IAAM","file":"3.eb9581a3febbe28409bd.bundle.js","sourcesContent":["import React from 'react';\r\n\r\nconst Home = () => <div>Home PAGE</div>;\r\n\r\nexport default Home;"],"sourceRoot":""}

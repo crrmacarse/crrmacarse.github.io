@@ -9,9 +9,9 @@ module.exports = {
     devtool: "source-map",
     entry: "./src/index.tsx",
     output: {
-        path: path.join(__dirname, '..', '/docs'),
         filename: '[name].[hash].bundle.js',
-        publicPath: '/'
+        path: path.join(process.cwd(), '/docs'),
+        publicPath: './' // @TODO: This temprarily solves the problem with github pages not loading the bundle
       },
     resolve: {
         modules: [
@@ -60,7 +60,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'src/index.html'
+            template: path.resolve(__dirname, '..', 'src/index.html'), 
         }),
         new CleanWebpackPlugin(),
     ],
