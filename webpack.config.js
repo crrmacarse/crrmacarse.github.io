@@ -1,9 +1,15 @@
+var path = require('path');
+
 module.exports = {
     mode: "development",
     devtool: "source-map",
     entry: "./src/index.tsx",
     resolve: {
-        extensions: [".ts", ".tsx", '.js']
+        modules: [
+            'node_modules',
+            path.resolve(__dirname, 'src'),
+          ],
+        extensions: [".ts", ".tsx", '.js'],
     },
 
     // @TODO: Should add babel-lodaer for js support
