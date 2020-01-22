@@ -1,5 +1,7 @@
-var path = require('path');
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 
 const PORT = process.env.PORT || 3333
 
@@ -9,6 +11,10 @@ const devServer = () => ({
     historyApiFallback: true,
     compress: true,
     port: PORT,
+    overlay: {
+        errors: true,
+        warnings: true,
+    },
 })
 
 module.exports = {
@@ -16,7 +22,7 @@ module.exports = {
     entry: "./src/index.tsx",
     output: {
         path: path.join(__dirname, '/dist'),
-        filename: 'bundle.js',
+        filename: '[name].[hash].bundle.js',
         publicPath: '/'
       },
     resolve: {
@@ -51,6 +57,17 @@ module.exports = {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
             },
+            {
+                test: /\.(png|jpg|jpeg|gif|svg|ico|pdf)$/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                      name: '[name].[ext]',
+                    },
+                  },
+                ],
+              },
         ]
     },
     // Webpack dev server config
@@ -60,5 +77,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html'
         }),
+        new CleanWebpackPlugin(),
     ],
 };
