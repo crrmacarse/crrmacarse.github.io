@@ -1,34 +1,22 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// import { rules, plugins } from './common'
 
-
-const PORT = process.env.PORT || 3333
-
-const devServer = () => ({
-    contentBase: path.join(__dirname, './dist'),
-    writeToDisk: true,
-    historyApiFallback: true,
-    compress: true,
-    port: PORT,
-    overlay: {
-        errors: true,
-        warnings: true,
-    },
-})
-
+// This will create a build for github pages
 module.exports = {
+    mode: "production",
     devtool: "source-map",
     entry: "./src/index.tsx",
     output: {
-        path: path.join(__dirname, '/dist'),
+        path: path.join(__dirname, '..', '/docs'),
         filename: '[name].[hash].bundle.js',
         publicPath: '/'
       },
     resolve: {
         modules: [
             'node_modules',
-            path.resolve(__dirname, 'src'),
+            path.resolve(__dirname, '..', 'src'),
           ],
         extensions: [".ts", ".tsx", '.js'],
     },
@@ -70,12 +58,9 @@ module.exports = {
               },
         ]
     },
-    // Webpack dev server config
-    devServer: devServer(),
-    // This will create a html template File
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html'
+            template: 'src/index.html'
         }),
         new CleanWebpackPlugin(),
     ],
