@@ -1,12 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { NavLink as Link } from 'react-router-dom'
 import * as ROUTES from 'constants/routes'
 
-const Navbar = () => <ul>
-    <Link to={ROUTES.HOME}>Home</Link>
-    <Link to={ROUTES.PORTFOLIO}>Portfolio</Link>
-    <Link to={ROUTES.ABOUT}>About</Link>
-    <Link to={ROUTES.CONTACT}>Contact</Link>
-</ul>
+const Navbar = () => <div className="navbar-section">
+        <ul className="ui secondary pointing menu">
+            <Link exact className="item" activeClassName="active" to={ROUTES.HOME}>Home</Link>
+            <Link exact className="item" activeClassName="active" to={ROUTES.PORTFOLIO}>Portfolio</Link>
+            <Link exact className="item" activeClassName="active" to={ROUTES.ABOUT}>About</Link>
+            <Link exact className="item" activeClassName="active" to={ROUTES.CONTACT}>Contact</Link>
+        </ul>
+    </div>
 
 export default Navbar;
