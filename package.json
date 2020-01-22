@@ -49,7 +49,7 @@
     "webpack-dev-server": "^3.10.1"
   },
   "keywords": [],
-  "author": "",
+  "author": "@crrmacarse",
   "license": "ISC",
-  "description": ""
+  "description": "Personal Portfolio"
 }
