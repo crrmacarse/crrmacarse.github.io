@@ -1,0 +1,32 @@
+@import "variables.scss";
+
+:root{
+  --data-color-primary: #{$light-primary};
+  --data-color-secondary: #{$light-secondary};
+}
+
+html, body {
+  height: 100%;
+  margin: 0px;
+  background-color: var(--data-color-primary);
+  color: var(--data-color-secondary);
+}
+
+@media (prefers-color-scheme: dark) {
+  img {
+    filter: grayscale(30%);
+  }
+
+  // kung mag switch balik tas dark mode
+  // i override ko via
+  :root:not([data-theme]) {
+    --data-color-primary: #{$dark-primary};
+    --data-color-secondary: #{$dark-secondary};
+  }
+}
+
+// prfers color scheme vs this
+[data-theme="dark"] {
+  --data-color-primary: #{$dark-primary};
+  --data-color-secondary: #{$dark-secondary};
+}
