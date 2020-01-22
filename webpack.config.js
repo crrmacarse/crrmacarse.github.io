@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3333
 const devServer = () => ({
     contentBase: path.join(__dirname, './dist'),
     writeToDisk: true,
+    historyApiFallback: true,
     compress: true,
     port: PORT,
 })
@@ -16,6 +17,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, '/dist'),
         filename: 'bundle.js',
+        publicPath: '/'
       },
     resolve: {
         modules: [
