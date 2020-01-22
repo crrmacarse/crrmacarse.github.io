@@ -5,5 +5,5 @@ import Navbar from 'components/shared/navbar'
 const component = shallow(<Navbar />);
 
 describe('<Navbar />', () => {
-    it('renders', () => component)
+    it('renders', () => { component })
 })
