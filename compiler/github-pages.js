@@ -11,7 +11,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, '..', '/docs'),
         filename: '[name].[hash].bundle.js',
-        publicPath: '/'
+        publicPath: '/docs/'
       },
     resolve: {
         modules: [
