@@ -12,6 +12,8 @@
     "test-update": "jest --updateSnapshot"
   },
   "dependencies": {
+    "i18next": "^19.0.3",
+    "i18next-browser-languagedetector": "^4.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-i18next": "^11.3.1",

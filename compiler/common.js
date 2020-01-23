@@ -5,11 +5,14 @@ import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 export const entry = join(process.cwd(), '/src/index.tsx')
 
 export const moduleResolver = {
-    modules: [
-      'node_modules',
-      resolve(__dirname, '..', 'src'),
-    ],
+  modules: [
+    'node_modules',
+    resolve(__dirname, '..', 'src'),
+  ],
   extensions: [".ts", ".tsx", '.js'],
+  alias: {
+    assets: resolve(__dirname, '..', 'src/assets/'),
+  },
 }
 
 export const rules = [

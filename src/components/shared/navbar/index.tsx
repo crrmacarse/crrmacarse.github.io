@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink as Link } from 'react-router-dom'
 import * as ROUTES from 'constants/routes'
+import ChangeButtonToggle from './change-language-toggle'
 
 export interface NavbarProps {
     theme: string,
@@ -19,7 +20,8 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => <nav className="navbar-s
         <Link exact className="mx-3 p-1" activeClassName="active border-b-2" to={ROUTES.RESUME}>Resume</Link>
         <Link exact className="mx-3 p-1" activeClassName="active border-b-2" to={ROUTES.ABOUT}>About</Link>
         <Link exact className="mx-3 p-1" activeClassName="active border-b-2" to={ROUTES.PERSONAL}>Personal</Link>
-        <div className="mx-3 cursor-pointer" onClick={toggleTheme}>{theme === 'dark' ? lightModeIcon : darkModeIcon}</div>
+        <ChangeButtonToggle className="mx-3 cursor-pointer text-sm select-none" />
+        <li className="mx-3 cursor-pointer" onClick={toggleTheme}>{theme === 'dark' ? lightModeIcon : darkModeIcon}</li>
     </ul>
 </nav>
 

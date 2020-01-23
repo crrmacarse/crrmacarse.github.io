@@ -19,7 +19,7 @@ export default {
         ...rules,
         {
           test: /\.(scss|css)$/i,
-          use: [ExtractPlugin.loader, 'css-loader', 'sass-loader'],
+          use: [ExtractPlugin.loader, 'css-loader', 'sass-loader', 'postcss-loader'],
         },
       ],
     },
