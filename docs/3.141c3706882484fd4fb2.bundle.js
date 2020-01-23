@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{24:function(e,a,n){"use strict";n.r(a);var o=n(0),s=n.n(o);a.default=()=>s.a.createElement("div",{className:"home-section"},"Home Page")}}]);
-//# sourceMappingURL=3.141c3706882484fd4fb2.bundle.js.map

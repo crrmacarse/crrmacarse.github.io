@@ -1,5 +1,6 @@
 import { join } from 'path'
 import CompressionPlugin from 'compression-webpack-plugin'
+import ExtractPlugin from 'mini-css-extract-plugin';
 import { entry, moduleResolver, rules, plugins } from './common'
 
 // This will create a build for github pages

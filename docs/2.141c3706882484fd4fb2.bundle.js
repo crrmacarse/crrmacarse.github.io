@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{27:function(a,e,n){"use strict";n.r(e);var t=n(0),c=n.n(t);e.default=()=>c.a.createElement("div",{className:"contact-section"},"Contact Page")}}]);
-//# sourceMappingURL=2.141c3706882484fd4fb2.bundle.js.map

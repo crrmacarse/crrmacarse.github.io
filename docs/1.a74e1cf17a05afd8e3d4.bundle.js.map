@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/components/public/about/index.tsx"],"names":["className"],"mappings":"yFAAA,2BAIe,UAFD,IAAM,yBAAKA,UAAU,iBAAe","file":"1.a74e1cf17a05afd8e3d4.bundle.js","sourcesContent":["import React from 'react'\r\n\r\nconst About = () => <div className=\"about-section\">About Page</div>\r\n\r\nexport default About;"],"sourceRoot":""}

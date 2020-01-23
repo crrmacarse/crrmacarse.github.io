@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/components/public/contact/index.tsx"],"names":["className"],"mappings":"yFAAA,2BAIe,UAFC,IAAM,yBAAKA,UAAU,mBAAiB","file":"2.a74e1cf17a05afd8e3d4.bundle.js","sourcesContent":["import React from 'react';\r\n\r\nconst Contact = () => <div className=\"contact-section\">Contact Page</div>\r\n\r\nexport default Contact;"],"sourceRoot":""}
