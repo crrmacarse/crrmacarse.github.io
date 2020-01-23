@@ -1,83 +1,30 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-// import { rules, plugins } from './common'
+import { join, resolve } from 'path'
+import CompressionPlugin from 'compression-webpack-plugin'
+import { rules, plugins } from './common'
 
 // This will create a build for github pages
-module.exports = {
+export default {
     mode: "production",
     devtool: "source-map",
     entry: "./src/index.tsx",
     output: {
+        path: join(process.cwd(), '/docs'),
         filename: '[name].[hash].bundle.js',
-        path: path.join(process.cwd(), '/docs'),
+        chunkFilename: '[name].[hash].bundle.js',
         publicPath: './' // @TODO: This temprarily solves the problem with github pages not loading the bundle
       },
     resolve: {
         modules: [
             'node_modules',
-            path.resolve(__dirname, '..', 'src'),
+            resolve(__dirname, '..', 'src'),
           ],
         extensions: [".ts", ".tsx", '.js'],
     },
     module: {
-        rules: [
-            {
-                test: /\.ts(x?)$/,
-                exclude: /node_modules/,
-                use: [
-                    {
-                        loader: "ts-loader"
-                    }
-                ]
-            },
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader',
-              },
-            {
-                enforce: "pre",
-                test: /\.js$/,
-                loader: "source-map-loader"
-            },
-            {
-                test: /\.(scss|css)$/i,
-                use: [
-                  {
-                    loader: 'style-loader',
-                  },
-                  {
-                    loader: 'css-loader',
-                    options: {
-                      sourceMap: true,
-                    },
-                  },
-                  {
-                    loader: 'sass-loader',
-                    options: {
-                      sourceMap: true,
-                    },
-                  },
-                ],
-              },
-            {
-                test: /\.(png|jpg|jpeg|gif|svg|ico|pdf)$/,
-                use: [
-                  {
-                    loader: 'file-loader',
-                    options: {
-                      name: '[name].[ext]',
-                    },
-                  },
-                ],
-              },
-        ]
+        rules,
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, '..', 'src/index.html'), 
-        }),
-        new CleanWebpackPlugin(),
-    ],
+      ...plugins,
+      new CompressionPlugin(),
+  ],
 };

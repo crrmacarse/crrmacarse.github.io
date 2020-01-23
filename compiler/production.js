@@ -1,82 +1,29 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-// import { rules, plugins } from './common'
+import { join, resolve } from 'path';
+import CompressionPlugin from 'compression-webpack-plugin'
+import { rules, plugins } from './common'
 
-module.exports = {
+export default {
     mode: "production",
     devtool: "source-map",
-    entry: "./src/index.tsx",
+    entry: join(process.cwd(), '/src/index.tsx'),
     output: {
-      path: path.join(__dirname, '..', '/dist'),
+        path: join(process.cwd(), '/dist'),
         filename: '[name].[hash].bundle.js',
+        chunkFilename: '[name].[hash].bundle.js',
         publicPath: '/'
       },
     resolve: {
         modules: [
             'node_modules',
-            path.resolve(__dirname, '..', 'src'),
+            resolve(__dirname, '..', 'src'),
           ],
         extensions: [".ts", ".tsx", '.js'],
     },
     module: {
-      rules: [
-        {
-            test: /\.ts(x?)$/,
-            exclude: /node_modules/,
-            use: [
-                {
-                    loader: "ts-loader"
-                }
-            ]
-        },
-        {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: 'babel-loader',
-          },
-        {
-            enforce: "pre",
-            test: /\.js$/,
-            loader: "source-map-loader"
-        },
-        {
-          test: /\.(scss|css)$/i,
-          use: [
-            {
-              loader: 'style-loader',
-            },
-            {
-              loader: 'css-loader',
-              options: {
-                sourceMap: true,
-              },
-            },
-            {
-              loader: 'sass-loader',
-              options: {
-                sourceMap: true,
-              },
-            },
-          ],
-        },
-        {
-            test: /\.(png|jpg|jpeg|gif|svg|ico|pdf)$/,
-            use: [
-              {
-                loader: 'file-loader',
-                options: {
-                  name: '[name].[ext]',
-                },
-              },
-            ],
-          },
-    ]
+      rules,
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: 'src/index.html'
-        }),
-        new CleanWebpackPlugin(),
+        ...plugins,
+        new CompressionPlugin(),
     ],
 };
