@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { HashRouter as Router } from 'react-router-dom' // @TODO Research more about BrowserRouter vs HashRouter
+import { BrowserRouter as Router } from 'react-router-dom'
 import PublicRoutes from 'routes/public'
 import useDarkMode from 'hooks/useDarkMode';
 import BaseLoader from 'components/shared/loader/base'
