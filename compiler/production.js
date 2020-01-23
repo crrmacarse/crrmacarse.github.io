@@ -1,6 +1,6 @@
 import { join } from 'path';
 import CompressionPlugin from 'compression-webpack-plugin'
-import ExtractPlugin from 'mini-css-extract-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { entry, moduleResolver, rules, plugins } from './common'
 
 export default {
@@ -19,19 +19,18 @@ export default {
         ...rules,
         {
           test: /\.(scss|css)$/i,
-          use: [ExtractPlugin.loader, 'css-loader', 'sass-loader', 'postcss-loader'],
+          use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader', 'postcss-loader'],
         },
       ],
     },
     plugins: [
         ...plugins,
-        new ExtractPlugin({
+        new CompressionPlugin(),
+        new MiniCssExtractPlugin({
           // Options similar to the same options in webpackOptions.output
           // both options are optional
-          filename: '[name].[hash].css',
-          chunkFilename: '[name].[hash].css',
-          ignoreOrder: false, // Enable to remove warnings about conflicting order
+          filename: '[name].[contentHash].css',
+          chunkFilename: '[id].[contentHash].css',
         }),
-        new CompressionPlugin(),
     ],
 };

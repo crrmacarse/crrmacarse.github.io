@@ -60,6 +60,7 @@ export const plugins = [
   new HtmlWebpackPlugin({
       template: join(process.cwd(), '/src/index.html'),
       inject: 'body',
+      favicon: join(process.cwd(), './src/assets/ico/favicon.ico'),
   }),
   new CleanWebpackPlugin(),
 ]
