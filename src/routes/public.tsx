@@ -3,21 +3,21 @@ import { Route, Switch } from 'react-router-dom'
 import * as ROUTES from 'constants/routes'
 import NotFound from './not-found'
 
-// @TODO: Idk yet how exactly this works
 const Home = lazy(() => import("components/public/home"));
 const Portfolio = lazy(() => import("components/public/portfolio"))
 const About = lazy(() => import("components/public/about"))
 const Contact = lazy(() => import("components/public/contact"));
+const Resume = lazy(() => import("components/public/resume"));
+const Personal = lazy(() => import("components/public/personal"));
 
 export default () => (
-    <div className="ui container">
-        <h1 className="uppercase">got in</h1>
-        <Switch>
-            <Route exact path={ROUTES.HOME} component={Home} />
-            <Route path={ROUTES.PORTFOLIO} component={Portfolio} />
-            <Route path={ROUTES.ABOUT} component={About} />
-            <Route path={ROUTES.CONTACT} component={Contact} />
-            <Route component={NotFound} />
-        </Switch>
-    </div>
+    <Switch>
+        <Route exact path={ROUTES.HOME} component={Home} />
+        <Route path={ROUTES.PORTFOLIO} component={Portfolio} />
+        <Route path={ROUTES.ABOUT} component={About} />
+        <Route path={ROUTES.CONTACT} component={Contact} />
+        <Route path={ROUTES.RESUME} component={Resume} />
+        <Route path={ROUTES.PERSONAL} component={Personal} />
+        <Route component={NotFound} />
+    </Switch>
 )

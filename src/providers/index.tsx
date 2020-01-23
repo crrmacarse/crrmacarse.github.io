@@ -7,20 +7,20 @@ import Navbar from 'components/shared/navbar'
 import Footer from 'components/shared/footer'
 import ErrorBoundary from './error-boundary'
 
+// @TODO: Suspense fallback should have delay for
+// better UX
 export default () => {
     const [theme, toggleTheme] = useDarkMode()
 
     return <div className={`theme theme--${theme}`}>
-        <div className="base">
-            <Router>
-                <ErrorBoundary>
-                    <Suspense fallback={<BaseLoader />}>
-                        <Navbar toggleTheme={() => toggleTheme()} />
-                        <PublicRoutes />
-                        <Footer />
-                    </Suspense>
-                </ErrorBoundary>
-            </Router>
-        </div>
+        <Router>
+            <ErrorBoundary>
+                <Suspense fallback={<BaseLoader />}>
+                    <Navbar theme={theme} toggleTheme={() => toggleTheme()} />
+                    <PublicRoutes />
+                    <Footer />
+                </Suspense>
+            </ErrorBoundary>
+        </Router>
     </div>
 }

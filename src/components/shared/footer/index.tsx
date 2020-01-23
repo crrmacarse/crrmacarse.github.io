@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Footer = () => <div className="ui footer-section vertical segment">
+const Footer = () => <div className="footer-section ui vertical segment">
     <div className="ui container">
         <div className="ui inverted stackable divided grid">
             <div className="row"><div className="three wide column">
