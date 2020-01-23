@@ -1,0 +1,10 @@
+defaults:  
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+exclude:  
+  - "*.config.js"
+  - "package*.json"
+  - "node_modules"
