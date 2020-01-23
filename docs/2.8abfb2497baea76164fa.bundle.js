@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{49:function(e,t,n){"use strict";n.r(t);var a=n(0),c=n.n(a);t.default=()=>c.a.createElement("div",{className:"about-section flex flex-col items-center justify-center"},"About Page")}}]);
-//# sourceMappingURL=2.8abfb2497baea76164fa.bundle.js.map

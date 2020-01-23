@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{50:function(e,t,c){"use strict";c.r(t);var n=c(0),a=c.n(n);t.default=()=>a.a.createElement("div",{className:"contact-section flex flex-col items-center justify-center"},"Contact Page")}}]);
-//# sourceMappingURL=3.8abfb2497baea76164fa.bundle.js.map
