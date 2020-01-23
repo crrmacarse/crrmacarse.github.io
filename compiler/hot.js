@@ -1,5 +1,5 @@
-import { join, resolve } from 'path'
-import { rules, plugins } from './common'
+import { join } from 'path'
+import { entry, moduleResolver, rules, plugins } from './common'
 
 const PORT = process.env.PORT || 3333
 
@@ -19,22 +19,41 @@ const devServer = () => ({
 export default {
     mode: "development",
     devtool: "source-map",
-    entry: join(process.cwd(), '/src/index.tsx'),
+    entry,
     output: {
         path: join(process.cwd(), '/dist'),
         filename: '[name].[hash].bundle.js',
         chunkFilename: '[name].[hash].bundle.js',
         publicPath: '/'
       },
-    resolve: {
-        modules: [
-            'node_modules',
-            resolve(__dirname, '..', 'src'),
-          ],
-        extensions: [".ts", ".tsx", '.js'],
-    },
+    resolve: moduleResolver,
     module: {
-        rules,
+        rules: [
+            ...rules, 
+            {
+            test: /\.(scss|css)$/i,
+            use: [
+              {
+                loader: 'style-loader',
+              },
+              {
+                loader: 'css-loader',
+                options: {
+                  sourceMap: true,
+                },
+              },
+              {
+                loader: 'postcss-loader',
+              },
+              {
+                loader: 'sass-loader',
+                options: {
+                  sourceMap: true,
+                },
+              },
+            ],
+          },
+        ],
     },
     plugins,
     devServer: devServer(),

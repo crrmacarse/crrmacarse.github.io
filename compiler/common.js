@@ -1,6 +1,16 @@
-import { join } from 'path'
+import { join, resolve } from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+
+export const entry = join(process.cwd(), '/src/index.tsx')
+
+export const moduleResolver = {
+    modules: [
+      'node_modules',
+      resolve(__dirname, '..', 'src'),
+    ],
+  extensions: [".ts", ".tsx", '.js'],
+}
 
 export const rules = [
   {
@@ -22,26 +32,6 @@ export const rules = [
       test: /\.js$/,
       loader: "source-map-loader"
   },
-  {
-      test: /\.(scss|css)$/i,
-      use: [
-        {
-          loader: 'style-loader',
-        },
-        {
-          loader: 'css-loader',
-          options: {
-            sourceMap: true,
-          },
-        },
-        {
-          loader: 'sass-loader',
-          options: {
-            sourceMap: true,
-          },
-        },
-      ],
-    },
   {
       test: /\.(png|jpg|jpeg|gif|svg|ico|pdf)$/,
       use: [

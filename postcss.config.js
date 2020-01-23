@@ -3,9 +3,9 @@ const autoprefixer = require('autoprefixer');
 const purgecss = require('@fullhuman/postcss-purgecss')({
 
   content: [
-    './resources/js/**/*.ts',
-    './resources/js/**/*.tsx',
-    './resources/js/**/*.js',
+    './src/**/*.ts',
+    './src/**/*.tsx',
+    './src/**/*.js',
   ],
 
   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
@@ -13,7 +13,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
 
 module.exports = {
   plugins: [
-    tailwindcss,
+    tailwindcss('./tailwind.config.js'),
     autoprefixer,
     ...process.env.NODE_ENV === 'production'
       ? [purgecss]

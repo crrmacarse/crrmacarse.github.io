@@ -11,6 +11,7 @@ const Contact = lazy(() => import("components/public/contact"));
 
 export default () => (
     <div className="ui container">
+        <h1 className="uppercase">got in</h1>
         <Switch>
             <Route exact path={ROUTES.HOME} component={Home} />
             <Route path={ROUTES.PORTFOLIO} component={Portfolio} />
