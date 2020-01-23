@@ -14,35 +14,43 @@ export const moduleResolver = {
 
 export const rules = [
   {
-      test: /\.ts(x?)$/,
-      exclude: /node_modules/,
-      use: [
-          {
-              loader: "ts-loader"
-          }
-      ]
-  },
-  {
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'babel-loader',
-    },
-  {
-      enforce: "pre",
-      test: /\.js$/,
-      loader: "source-map-loader"
-  },
-  {
-      test: /\.(png|jpg|jpeg|gif|svg|ico|pdf)$/,
-      use: [
+    test: /\.ts(x?)$/,
+    exclude: /node_modules/,
+    use: [
         {
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-          },
+            loader: "ts-loader"
+        }
+    ]
+  },
+  {
+    test: /\.js$/,
+    exclude: /node_modules/,
+    loader: 'babel-loader',
+  },
+  {
+    enforce: "pre",
+    test: /\.js$/,
+    loader: "source-map-loader"
+  },
+  {
+    test: /\.(png|jpg|jpeg|gif|svg|ico|pdf)$/,
+    use: [
+      {
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
         },
-      ],
-    },
+      },
+    ],
+  },
+  {
+    test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+    loader: 'file-loader',
+  },
+  {
+    test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+    loader: 'file-loader',
+  },
 ]
 
 export const plugins = [

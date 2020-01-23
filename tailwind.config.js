@@ -1,9 +1,33 @@
 module.exports = {
+  theme: {
+    colors: {},
+  },
   variants: {},
   plugins: [],
-  corePlugins: {
-    float: false,
-    verticalAlign: false,
-    fontFamily: false,
-  }
+  corePlugins: [
+    'preflight',
+    'display',
+    'cursor',
+    'flex',
+    'flexDirection',
+    'flexGrow',
+    'flexShrink',
+    'flexWrap',
+    'alignItems',
+    'alignContent',
+    'alignSelf',
+    'fontSize',
+    'justifyContent',
+    'margin',
+    'zIndex',
+    'textTransform',
+    'fontWeight',
+    'height',
+    'width',
+    'padding',
+    'borderWidth',
+    'position',
+    'inset',
+    'opacity',
+  ]
 }
