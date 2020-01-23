@@ -1,34 +1,31 @@
 import React from 'react';
+import { useTranslation } from "react-i18next";
+import { Link } from 'react-router-dom'
+import * as ROUTES from 'constants/routes'
 
-const Footer = () => <div className="footer-section ui vertical segment">
-    <div className="ui container">
-        <div className="ui inverted stackable divided grid">
-            <div className="row"><div className="three wide column">
-                <h4 className="ui inverted header">Lorem</h4>
-                <div role="list" className="ui inverted link list">
-                    <a role="listitem" className="item">Ipsum</a>
-                    <a role="listitem" className="item">Dolor Sit</a>
-                    <a role="listitem" className="item">Libero Quis</a>
-                </div>
-            </div>
-                <div className="three wide column"><h4 className="ui inverted header">LINKS</h4>
-                    <div role="list" className="ui inverted link list">
-                        <a role="listitem" className="item">Github</a>
-                        <a role="listitem" className="item">LinkedIn</a>
-                        <a role="listitem" className="item">Twitter</a>
-                    </div></div>
-                <div className="seven wide column">
-                    <h4 className="ui inverted header">Lorem Ipsum Dolor</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed ac massa id neque ultricies ornare id vel libero.
-                        Nam molestie, libero quis maximus consequat, lectus diam
-                        molestie ligula,
-                    </p>
-                </div>
+const Footer = () => {
+    const { t } = useTranslation();
+
+    return <div className="footer-section">
+        <div className="flex items-start justify-around lg:w-3/4 mx-auto px-10 lg:px-0 py-10">
+            <ul className="w-1/6">
+                <h4 className="font-bold mb-2">{t('footer.Still Interested?')}</h4>
+                <Link to={ROUTES.CONTACT}>{t('footer.Get in touch')}</Link>
+                <li><a href="https://github.com/crrmacarse/portfolio-remake">{t('footer.Source Code')}</a></li>
+                <li><Link to={ROUTES.MORE}>{t('footer.More')}</Link></li>
+            </ul>
+            <ul className="w-1/6">
+                <li><h4 className="font-bold mb-2">{t('footer.Links')}</h4></li>
+                <li><a href="https://github.com/crrmacarse">Github</a></li>
+                <li><a href="https://www.linkedin.com/in/christian-ryan-r-macarse-692974166/">LinkedIn</a></li>
+                <li><a href="https://twitter.com/pablongbuhaymo">Twitter</a></li>
+            </ul>
+            <div className="flex-grow">
+                <h4 className="font-bold mb-2">{t('footer.Random Fun Facts')}</h4>
+                <p className="max-w-2xl">{t('footer.facts')}</p>
             </div>
         </div>
     </div>
-</div>
+};
 
 export default Footer;

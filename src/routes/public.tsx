@@ -9,6 +9,7 @@ const About = lazy(() => import("components/public/about"))
 const Contact = lazy(() => import("components/public/contact"));
 const Resume = lazy(() => import("components/public/resume"));
 const Personal = lazy(() => import("components/public/personal"));
+const More = lazy(() => import("components/public/more"));
 
 export default () => (
     <Switch>
@@ -18,6 +19,7 @@ export default () => (
         <Route path={ROUTES.CONTACT} component={Contact} />
         <Route path={ROUTES.RESUME} component={Resume} />
         <Route path={ROUTES.PERSONAL} component={Personal} />
+        <Route path={ROUTES.MORE} component={More} />
         <Route component={NotFound} />
     </Switch>
 )

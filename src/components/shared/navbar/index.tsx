@@ -15,7 +15,7 @@ const lightModeIcon = <i className="fas text-lg fa-sun"></i>
 const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
     const { t } = useTranslation();
 
-    return <nav className="navbar-section flex items-center justify-between flex-wrap p-5">
+    return <nav className="navbar-section flex items-center justify-between flex-wrap fixed top-0 w-full py-8 px-16">
         <div className="flex items-center flex-grow">
             <Link className="font-semibold text-xl" to={ROUTES.HOME}>Christian Ryan R. Macarse</Link>
         </div>

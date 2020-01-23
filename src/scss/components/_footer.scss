@@ -1,6 +1,6 @@
 .footer-section {
     @include themed() {
-        color: t($text);
-        background: t($bg);
+        color: t($text-secondary);
+        background: t($bg-secondary);
     }
 }

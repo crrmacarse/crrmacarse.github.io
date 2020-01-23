@@ -29,5 +29,6 @@ module.exports = {
     'position',
     'inset',
     'opacity',
+    'maxWidth',
   ]
 }

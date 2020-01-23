@@ -2,16 +2,19 @@ $bg: 'bg';
 $text: 'text';
 $text-important: 'text-important';
 $text-secondary: 'text-secondary';
+$bg-secondary: 'bg-secondary';
 
 $themes: (
         default: (
                 bg: $bg--light,
+                bg-secondary: $bg--light--secondary,
                 text: $text--light,
                 text-important: $text--imp--light,
                 text-secondary: $text--2--light,
         ),
         dark: (
                 bg: $bg--dark,
+                bg-secondary: $bg--dark--secondary,
                 text: $text--dark,
                 text-important: $text--imp--dark,
                 text-secondary: $text--2--dark,
