@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{51:function(e,s,n){"use strict";n.r(s);var t=n(0),c=n.n(t);s.default=()=>c.a.createElement("div",{className:"resume-section flex flex-col items-center justify-center"},"Resume Page")}}]);
+//# sourceMappingURL=8.8abfb2497baea76164fa.bundle.js.map
