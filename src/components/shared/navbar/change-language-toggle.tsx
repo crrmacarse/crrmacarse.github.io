@@ -8,14 +8,15 @@ const ChangeLanguage = ({ className }: { className?: string }) => {
     const { t, i18n } = useTranslation();
 
     const handleChangeLanguage = () => {
-        const language = i18n.language === "en" ? "tl" : "en"
+        const language = /^[en]/.test(i18n.language) ? "tl" : "en"
 
         i18n.changeLanguage(language)
     }
 
-    const renderLang = i18n.language === 'en' ? "EN" : "PH";
+    console.log(i18n)
+    const renderLang =  /^[en]/.test(i18n.language) ? "EN" : "PH";
 
-    return <li className={className} onClick={handleChangeLanguage}>{renderLang}</li>
+    return <div className={className} onClick={handleChangeLanguage}>{renderLang}</div>
 }
 
 export default ChangeLanguage;

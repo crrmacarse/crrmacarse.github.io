@@ -7,5 +7,8 @@ export default {
         navbar,
         footer,
         home,
+        "Click here":"Pumunta dito.",
+        "notice": "Maaring bumisita nalang muna sa nakaraang beryson",
+        "here": "dito."
     }
 }

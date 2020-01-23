@@ -7,5 +7,8 @@ export default {
       navbar,
       footer,
       home,
+      "Click here":"Click here.",
+      "notice": "For the meantime, you could visit the old website",
+      "here": "here."
     }
 }
