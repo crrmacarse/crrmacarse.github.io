@@ -1,32 +1,29 @@
-@import "variables.scss";
+@import "base/variables";
+@import "base/theme";
 
-:root{
-  --data-color-primary: #{$light-primary};
-  --data-color-secondary: #{$light-secondary};
+html {
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 html, body {
+  font-family: $font-family;
+  margin: 0;
   height: 100%;
-  margin: 0px;
-  background-color: var(--data-color-primary);
-  color: var(--data-color-secondary);
-}
+  background: $bg--dark;
 
-@media (prefers-color-scheme: dark) {
-  img {
-    filter: grayscale(30%);
+  p {
+    white-space: pre-line;
+
+    @include themed() {
+      color: t($text);
+    }
   }
 
-  // kung mag switch balik tas dark mode
-  // i override ko via
-  :root:not([data-theme]) {
-    --data-color-primary: #{$dark-primary};
-    --data-color-secondary: #{$dark-secondary};
+  a {
+    &:hover {
+      text-decoration: none;
+    }
   }
-}
 
-// prfers color scheme vs this
-[data-theme="dark"] {
-  --data-color-primary: #{$dark-primary};
-  --data-color-secondary: #{$dark-secondary};
 }

@@ -1,0 +1,48 @@
+$bg: 'bg';
+$card-bg: 'card-bg';
+$card-border: 'card-border';
+$text: 'text';
+$text-important: 'text-important';
+$text-secondary: 'text-secondary';
+$text-badge: 'text-badge';
+$link: 'link';
+$hover: 'hover';
+$logo: 'logo';
+$logo2: 'logo-2';
+$brand-blue: 'brand-blue';
+$brand-red: 'brand-red';
+$border: 'border';
+
+$themes: (
+        default: (
+                bg: $bg--light,
+                text: $text--light,
+                text-important: $text--imp--light,
+                text-secondary: $text--2--light,
+        ),
+        dark: (
+                bg: $bg--dark,
+                text: $text--dark,
+                text-important: $text--imp--dark,
+                text-secondary: $text--2--dark,
+        ),
+);
+
+
+@mixin themed() {
+    @each $theme, $map in $themes {
+      .theme--#{$theme} & {
+        $theme-map: () !global;
+        @each $key, $submap in $map {
+          $value: map-get(map-get($themes, $theme), '#{$key}');
+          $theme-map: map-merge($theme-map, ($key: $value)) !global;
+        }
+        @content;
+        $theme-map: null !global;
+      }
+    }
+  }
+  
+  @function t($key) {
+    @return map-get($theme-map, $key);
+  }

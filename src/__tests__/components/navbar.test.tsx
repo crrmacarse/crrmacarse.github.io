@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme'
-import Navbar from 'components/shared/navbar'
+import Footer from 'components/shared/footer'
 
-const component = shallow(<Navbar />);
+const component = shallow(<Footer />);
 
-describe('<Navbar />', () => {
+describe('<Footer />', () => {
     it('renders', () => { component })
 })

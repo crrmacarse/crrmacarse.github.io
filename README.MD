@@ -1,6 +1,6 @@
 # Yet Another Attempt to remake my Portfolio
 
-Writing from scratch
+Writing from scratch so i could better understand how webpack works!
 
 ## Overview
 

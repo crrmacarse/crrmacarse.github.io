@@ -1,7 +1,6 @@
 .navbar-section {
-    padding: 1em;
-
-    .ul {
-        color: white;
+    @include themed() {
+      color: t($text);
+      background: t($bg);
     }
 }

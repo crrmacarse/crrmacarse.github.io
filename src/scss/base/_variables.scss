@@ -1,7 +1,11 @@
-// light variables
-$light-primary: #fff;
-$light-secondary: #252c31;
+$font-family: 'Open Sans', 'Helvetica', 'Arial', 'sans-serif';
 
-// dark variables
-$dark-primary: #252c31;
-$dark-secondary: #e4e4e4;
+$bg--light: #F5F4F3;
+$text--imp--light: #242D30;
+$text--light: lighten($text--imp--light, 5%);
+$text--2--light: $text--imp--light;
+
+$bg--dark: #252c31;
+$text--dark: #cac3bc;
+$text--imp--dark: #E8E4E0;
+$text--2--dark: $text--imp--dark;
