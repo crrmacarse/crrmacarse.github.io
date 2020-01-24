@@ -8,6 +8,8 @@
 }
 
 .navbar-section-inverted {
+  z-index: 20;
+
   @include themed() {
     color: t($text-secondary);
     background: t($bg-secondary);

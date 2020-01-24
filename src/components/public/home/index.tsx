@@ -22,7 +22,7 @@ const Home = () => {
                 <animated.div key={index} style={{ transform: props.xy.interpolate(trans) }} />
             ))}
         </div>
-        <div className="z-20 text-center cursor-default">
+        <div className="z-19 text-center cursor-default">
             <h1>{t("home.title")}</h1>
             <p className="text-lg">{t('home.subtitle')} <a href="https://crrmacarse.github.io/old-portfolio/" className="font-bold">{t('Click here')}</a></p>
         </div>
