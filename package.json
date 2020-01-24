@@ -13,12 +13,15 @@
     "deploy": "npm version patch && npm run prod && gh-pages -b master -d dist"
   },
   "dependencies": {
+    "@types/react-pdf": "^4.0.3",
     "i18next": "^19.0.3",
     "i18next-browser-languagedetector": "^4.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-ga": "^2.7.0",
     "react-helmet": "^5.2.1",
     "react-i18next": "^11.3.1",
+    "react-pdf": "^4.1.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
     "react-spring": "^8.0.27",

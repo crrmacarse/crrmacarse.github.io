@@ -6,5 +6,5 @@ import 'i18n';
 
 ReactDOM.render(
     <Providers />,
-    document.getElementById("@crrmacarse")
+    document.getElementById("root")
 );

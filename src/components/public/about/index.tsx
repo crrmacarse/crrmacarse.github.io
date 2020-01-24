@@ -2,6 +2,12 @@ import React from 'react'
 import { useTranslation } from "react-i18next";
 import UnderConstructionImage from 'assets/images/under-construction.png';
 
+// TODO:
+// I like beer tbh for intro
+// small introduction
+// maybe a picture
+// links for works
+// contact link
 const About = () => {
     const { t } = useTranslation();
 
