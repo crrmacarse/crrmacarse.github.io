@@ -35,4 +35,4 @@ To run frontend testing:
 
 ---
 
-### Check out the website [here!](https://crrmacarse.github.io/portfolio-remake/#/)
+Follow me at twitter: [🐔](https://twitter.com/pablongbuhaymo)
