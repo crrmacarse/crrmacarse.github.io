@@ -4,3 +4,10 @@
       background: t($bg);
     }
 }
+
+.navbar-section-inverted {
+  @include themed() {
+    color: t($text-secondary);
+    background: t($bg-secondary);
+  }
+}
