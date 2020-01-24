@@ -1,6 +1,7 @@
 import CompressionPlugin from 'compression-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { entry, output, moduleResolver, rules, plugins } from './common'
+import TerserPlugin from 'terser-webpack-plugin'
 
 export default {
     mode: "production",
@@ -27,4 +28,11 @@ export default {
           chunkFilename: '[contentHash].[hash].css',
         }),
     ],
+    optimization: {
+      minimizer: [new TerserPlugin({
+        terserOptions: {
+          safari10: true,
+        },
+      })],
+    },
 };

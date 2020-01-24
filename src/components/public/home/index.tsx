@@ -6,6 +6,12 @@ const fast = { tension: 1200, friction: 40 }
 const slow = { mass: 10, tension: 200, friction: 50 }
 const trans = (x: number, y: number) => `translate3d(${x}px,${y}px,0) translate3d(-50%,-50%,0)`
 
+// @TODO:
+// Add Proceed to transition to
+// cleaner not chaotic version.
+// It'll include ReadMes and stuff
+// The website will be the showcase of
+// what i could do
 const Home = () => {
     const { t } = useTranslation();
     const [trail, set] = useTrail<any>(3, () => ({ xy: [0, 0], config: (i: any) => (i === 0 ? fast : slow) }))
