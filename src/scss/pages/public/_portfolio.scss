@@ -1,5 +1,7 @@
 .portfolio-section {
-    height: 100vh;
+    padding: 10em 0px;
+
+    // @TODO: Learn grid
 
     @include themed() {
       color: t($text);

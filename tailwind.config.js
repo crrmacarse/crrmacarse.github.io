@@ -30,5 +30,8 @@ module.exports = {
     'inset',
     'opacity',
     'maxWidth',
+    'boxShadow',
+    'borderRadius',
+    'overflow',
   ]
 }
