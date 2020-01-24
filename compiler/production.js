@@ -1,18 +1,12 @@
-import { join } from 'path';
 import CompressionPlugin from 'compression-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { entry, moduleResolver, rules, plugins } from './common'
+import { entry, output, moduleResolver, rules, plugins } from './common'
 
 export default {
     mode: "production",
     devtool: "source-map",
-    entry: entry,
-    output: {
-        path: join(process.cwd(), '/dist'),
-        filename: '[name].[hash].bundle.js',
-        chunkFilename: '[name].[hash].bundle.js',
-        publicPath: '/'
-      },
+    entry,
+    output,
     resolve: moduleResolver,
     module: {
       rules: [
@@ -29,8 +23,8 @@ export default {
         new MiniCssExtractPlugin({
           // Options similar to the same options in webpackOptions.output
           // both options are optional
-          filename: '[name].[contentHash].css',
-          chunkFilename: '[id].[contentHash].css',
+          filename: '[contentHash].[hash].css',
+          chunkFilename: '[contentHash].[hash].css',
         }),
     ],
 };

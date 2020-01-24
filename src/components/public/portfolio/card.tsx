@@ -10,7 +10,6 @@ export interface CardProps {
     tags?: string[],
 }
 
-// @TODO: Add image loader
 const Card = ({ title, description, tags = [], image: { src, alt = "Project" } }: CardProps) => (
     <div className="max-w-sm rounded-lg overflow-hidden shadow-lg">
         <img className="w-full object-center" src={src} alt={alt} />
@@ -21,7 +20,7 @@ const Card = ({ title, description, tags = [], image: { src, alt = "Project" } }
             </p>
         </div>
         <div className="px-6 py-4">
-            {tags.map(tag => <span className="inline-block text-sm font-semibold mr-3">
+            {tags.map((tag, key) => <span key={key} className="inline-block text-sm font-semibold mr-3">
                 {`#${tag}`}
             </span>
             )}

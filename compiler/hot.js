@@ -1,5 +1,5 @@
 import { join } from 'path'
-import { entry, moduleResolver, rules, plugins } from './common'
+import { entry, output, moduleResolver, rules, plugins } from './common'
 
 const PORT = process.env.PORT || 3333
 
@@ -20,12 +20,7 @@ export default {
     mode: "development",
     devtool: "source-map",
     entry,
-    output: {
-        path: join(process.cwd(), '/dist'),
-        filename: '[name].[hash].bundle.js',
-        chunkFilename: '[name].[hash].bundle.js',
-        publicPath: '/'
-      },
+    output,
     resolve: moduleResolver,
     module: {
         rules: [

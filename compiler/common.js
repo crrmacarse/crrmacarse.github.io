@@ -4,6 +4,13 @@ import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
 export const entry = join(process.cwd(), '/src/index.tsx')
 
+export const output = {
+    path: join(process.cwd(), '/dist'),
+    filename: '[id].[hash].bundle.js',
+    chunkFilename: '[id].[hash].bundle.js',
+    publicPath: '/'
+}
+
 export const moduleResolver = {
   modules: [
     'node_modules',
@@ -42,7 +49,7 @@ export const rules = [
         loader: 'url-loader',
         options: { 
           limit: 8192,
-          name: '[name]-[hash].[ext]',
+          name: '[contentHash].[hash].[ext]',
           outputPath: 'assets',
           publicPath: 'assets',
         }
@@ -50,7 +57,26 @@ export const rules = [
       {
         loader: 'image-webpack-loader',
         options: {
-          disable: true,
+          mozjpeg: {
+              progressive: true,
+              quality: 65,
+            },
+            // optipng.enabled: false will disable optipng
+            optipng: {
+                enabled: false
+            },
+            pngquant: {
+                quality: [0.65, 0.90],
+                speed: 4,
+            },
+            gifsicle: {
+                interlaced: false,
+            },
+            // the webp option will enable WEBP
+            webp: {
+                quality: 80,
+                enabled: true
+            }
         },
       },
     ],
