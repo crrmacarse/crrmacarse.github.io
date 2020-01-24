@@ -33,5 +33,6 @@ module.exports = {
     'boxShadow',
     'borderRadius',
     'overflow',
+    'objectFit',
   ]
 }

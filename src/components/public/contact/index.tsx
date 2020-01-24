@@ -2,6 +2,9 @@ import React from 'react';
 import { useTranslation } from "react-i18next";
 import UnderConstructionImage from 'assets/images/under-construction.png';
 
+// @TODO:
+// contact page
+// to reach out and email
 const Contact = () => {
     const { t } = useTranslation();
 
