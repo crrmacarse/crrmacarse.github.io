@@ -1,4 +1,6 @@
 .navbar-section {
+    z-index: 20;
+
     @include themed() {
       color: t($text);
       background: t($bg);
