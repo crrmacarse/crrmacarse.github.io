@@ -39,9 +39,18 @@ export const rules = [
     test: /\.(png|jpg|jpeg|gif|svg|ico|pdf)$/,
     use: [
       {
-        loader: 'file-loader',
+        loader: 'url-loader',
+        options: { 
+          limit: 8192,
+          name: '[name]-[hash].[ext]',
+          outputPath: 'assets',
+          publicPath: 'assets',
+        }
+      },
+      {
+        loader: 'image-webpack-loader',
         options: {
-          name: '[name].[ext]',
+          disable: true,
         },
       },
     ],

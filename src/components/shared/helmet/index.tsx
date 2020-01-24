@@ -3,11 +3,10 @@ import { Helmet } from 'react-helmet';
 
 const BASE_TITLE = '@crrmacarse';
 
-// @TODO: Research more
-{/* <Helmet title={pathname} /> */}
 const ReactHelmet = ({ title }: { title: string }) => {
     const cleaned = title.replace(/\//, '');
-    const newTitle = `${BASE_TITLE} | ${cleaned}`;
+    const formatted = (cleaned.charAt(0).toUpperCase() + cleaned.slice(1)).trim();
+    const newTitle = cleaned ? `${BASE_TITLE} | ${formatted}` : BASE_TITLE;
 
     return <div>
         <Helmet>

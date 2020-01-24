@@ -13,7 +13,6 @@ const ChangeLanguage = ({ className }: { className?: string }) => {
         i18n.changeLanguage(language)
     }
 
-    console.log(i18n)
     const renderLang =  /^[en]/.test(i18n.language) ? "EN" : "PH";
 
     return <div className={className} onClick={handleChangeLanguage}>{renderLang}</div>
