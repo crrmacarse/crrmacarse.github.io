@@ -1,5 +1,5 @@
 .navbar-section {
-    z-index: 20;
+    z-index: 50;
 
     @include themed() {
       color: t($text);
@@ -8,7 +8,7 @@
 }
 
 .navbar-section-inverted {
-  z-index: 20;
+  z-index: 50;
 
   @include themed() {
     color: t($text-secondary);

@@ -1,13 +1,18 @@
 .home-section {
   height: 100vh;
 
-  h1 {
-    font-size: 8rem;
-  }
-
   @include themed() {
     color: t($text);
     background: t($bg);
+  }
+
+  h1 {
+    font-size: 8rem;
+    
+    @media (max-width: 768px) {
+      font-size: 4rem;
+      text-align: center;
+    }
   }
 
   .hooks-main > svg {
