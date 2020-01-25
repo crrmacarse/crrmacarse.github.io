@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState } from 'react';
 
 export interface ImageProps {
     className?: string,
@@ -9,25 +9,25 @@ export interface ImageProps {
 }
 
 const loaderMockUpStyles = {
-    // background: '#edf2f7',
-    position: 'absolute' as 'absolute',
-    filter: "blur(1px)",
-    transition: "opacity ease-in 1000ms",
-    clipPath: "inset(0)",
+  // background: '#edf2f7',
+  position: 'absolute' as 'absolute',
+  filter: 'blur(1px)',
+  transition: 'opacity ease-in 1000ms',
+  clipPath: 'inset(0)',
 };
 
 // @TODO:
 const ProgressiveImage = ({ className, image: { src, alt } }: ImageProps) => {
-    const [loaded, setLoaded] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
-    const loaderMockUp = <div style={loaderMockUpStyles} />
+  const loaderMockUp = <div style={loaderMockUpStyles} />;
 
-    return (
-        <div className="relative">
-            {!loaded && loaderMockUp}
-            <img className={className} src={src} alt={alt} onLoad={() => setLoaded(true)} />
-        </div>
-    )
-}
+  return (
+    <div className="relative">
+      {!loaded && loaderMockUp}
+      <img className={className} src={src} alt={alt} onLoad={() => setLoaded(true)} />
+    </div>
+  );
+};
 
 export default ProgressiveImage;

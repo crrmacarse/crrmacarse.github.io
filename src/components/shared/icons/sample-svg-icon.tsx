@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Bolt = ({ color = '#fff' }: { color?: string }) => (
   <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -16,7 +16,7 @@ const Bolt = ({ color = '#fff' }: { color?: string }) => (
       />
     </g>
   </svg>
-)
+);
 
 
-export default Bolt
+export default Bolt;
