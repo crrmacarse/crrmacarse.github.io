@@ -26,4 +26,9 @@ html, body {
     }
   }
 
+  div {
+    &:focus {
+      outline: none;
+    }
+  }
 }
