@@ -15,7 +15,6 @@
       "resolveJsonModule": true,
       "strictNullChecks": false,
     },
-    "include": ["src", "index.d.ts"],
+    "include": ["src", "index.d.ts", "global.d.ts"],
     "exclude": ["node_modules", "dist", "docs"],
   }
-  
