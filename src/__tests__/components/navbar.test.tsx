@@ -1,19 +1,22 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import Footer from 'components/shared/footer';
+import { shallow, ShallowWrapper } from 'enzyme';
+import Navbar, { NavbarProps } from 'components/shared/navbar';
 
-const component = shallow(<Footer />);
+let wrapper: ShallowWrapper<NavbarProps>;
 
-describe('<Footer />', () => {
-  it('renders', () => { component; });
+beforeEach(() => {
+  let mockFunc = () => jest.fn();
+  const component = <Navbar theme={"default"} toggleTheme={mockFunc} />
 
-  // it('renders children when passed in', () => {
-  //   const wrapper = shallow((
-  //     <div>
-  //       <div className="test" />
-  //     </div>
-  //   ));
-  //   expect(wrapper.contains(<div className="unique" />)).toBe(true);
-  // });
+  wrapper = shallow(component)
+});
 
+// @TODO: Play with functions inside here
+describe('<Navbar />', () => {
+  it('renders', () => { wrapper });
+
+  it('has props', () => {
+    expect(wrapper.prop('theme')).not.toBeNull();
+    expect(wrapper.prop('toggleTheme')).not.toBeNull();
+  })
 });

@@ -26,9 +26,9 @@ export default () => {
     } else if (isDarkMode) {
       handleThemeChange('dark');
     } else {
-      handleThemeChange('light');
+      handleThemeChange('default');
     }
   }, []);
 
-  return [theme, toggleTheme];
+  return { theme, toggleTheme };
 };

@@ -10,7 +10,7 @@ import ErrorBoundary from './error-boundary';
 // @TODO: Suspense fallback should have delay for
 // better UX
 export default () => {
-  const [theme, toggleTheme] = useDarkMode();
+  const { theme, toggleTheme } = useDarkMode();
 
   return (
     <div className={`theme theme--${theme}`}>

@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> matches the snapshot 1`] = `
+<div
+  className="footer-section"
+>
+  <div
+    className="flex items-start justify-around lg:w-3/4 mx-auto py-10"
+  >
+    <ul
+      className="lg:w-1/6 m-3"
+    >
+      <h4
+        className="font-bold mb-2"
+      >
+        footer.Still Interested?
+      </h4>
+      <a
+        href="/contact"
+        onClick={[Function]}
+      >
+        footer.Get in touch
+      </a>
+      <li>
+        <a
+          href="https://github.com/crrmacarse/portfolio-remake"
+        >
+          footer.Source Code
+        </a>
+      </li>
+      <li>
+        <a
+          href="/more"
+          onClick={[Function]}
+        >
+          footer.More
+        </a>
+      </li>
+    </ul>
+    <ul
+      className="lg:w-1/6 m-3"
+    >
+      <li>
+        <h4
+          className="font-bold mb-2"
+        >
+          footer.Links
+        </h4>
+      </li>
+      <li>
+        <a
+          href="https://github.com/crrmacarse"
+        >
+          Github
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/in/christian-ryan-r-macarse-692974166/"
+        >
+          LinkedIn
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://twitter.com/pablongbuhaymo"
+        >
+          Twitter
+        </a>
+      </li>
+    </ul>
+    <div
+      className="flex-grow m-3"
+    >
+      <h4
+        className="font-bold mb-2"
+      >
+        footer.Random Fun Facts
+      </h4>
+      <p
+        className="max-w-2xl"
+      >
+        footer.facts
+      </p>
+    </div>
+  </div>
+</div>
+`;

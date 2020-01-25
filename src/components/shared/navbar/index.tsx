@@ -40,7 +40,7 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
   const priorityButtons = (
     <>
       <ChangeButtonToggle className="lg:mx-3 my-2 lg:my-0 cursor-pointer text-sm select-none uppercase" />
-      <div className="mx-3 my-2 lg:my-0 cursor-pointer" role="button" tabIndex={0} onClick={toggleTheme} onKeyDown={toggleTheme}>{theme === 'dark' ? lightModeIcon : darkModeIcon}</div>
+      <div id="theme-toggler" className="mx-3 my-2 lg:my-0 cursor-pointer" role="button" tabIndex={0} onClick={toggleTheme} onKeyDown={toggleTheme}>{theme === 'dark' ? lightModeIcon : darkModeIcon}</div>
     </>
   );
 
