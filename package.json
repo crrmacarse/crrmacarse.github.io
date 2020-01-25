@@ -8,12 +8,13 @@
     "dev": "webpack --hot --profile --progress --config=webpack.config.babel.js --env=development",
     "prod": "webpack --profile --progress --config=webpack.config.babel.js --env=production",
     "analyze": "source-map-explorer './dist/*.js'",
-    "lint": "eslint --ext .js,.ts,.tsx . --ignore-pattern node_modules/",
+    "lint": "eslint --ext .js,.ts,.tsx --ignore-pattern node_modules/",
     "test": "jest --coverage",
     "test-watch": "jest --verbose --watch",
     "test-update": "jest --updateSnapshot",
-    "deploy": "npm version patch && npm run prod && cp dist/index.html dist/404.html && gh-pages -b master -d dist",
-    "deploy:windows": "npm version patch && npm run prod && copy 'dist/index.html' 'dist/404.html' && gh-pages -b master -d dist"
+    "pre-deploy": "npm run test && npm version patch && npm run prod",
+    "deploy": "npm run pre-deploy && cp dist/index.html dist/404.html && gh-pages -b master -d dist",
+    "deploy:windows": "npm run pre-deploy && copy 'dist/index.html' 'dist/404.html' && gh-pages -b master -d dist"
   },
   "dependencies": {
     "core-js": "^3.6.4",
@@ -27,7 +28,8 @@
     "react-pdf": "^4.1.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
-    "react-spring": "^8.0.27"
+    "react-spring": "^8.0.27",
+    "regenerator-runtime": "^0.13.3"
   },
   "main": "webpack.config.js",
   "devDependencies": {
