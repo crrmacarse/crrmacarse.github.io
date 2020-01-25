@@ -36,5 +36,5 @@ module.exports = {
     'objectFit',
     'textAlign',
     'borderStyle',
-  ]
-}
+  ],
+};
