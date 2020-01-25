@@ -9,10 +9,6 @@ exports[`<BaseLoader /> matches the snapshot 1`] = `
   />
   <div
     className="fixed flex flex-col justify-center items-center w-full h-screen top-0 z-20"
-  >
-    <i
-      className="fas fa-atom fa-spin "
-    />
-  </div>
+  />
 </div>
 `;
