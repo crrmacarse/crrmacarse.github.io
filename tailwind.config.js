@@ -35,5 +35,6 @@ module.exports = {
     'overflow',
     'objectFit',
     'textAlign',
+    'borderStyle',
   ]
 }
