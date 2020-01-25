@@ -27,8 +27,8 @@ const Home = () => {
         </filter>
       </svg>
       <div className="hooks-main" onMouseMove={(e) => set({ xy: [e.clientX, e.clientY] })}>
-        {trail.map((props: any) => (
-          <animated.div key={props.id} style={{ transform: props.xy.interpolate(trans) }} />
+        {trail.map((props: any, key) => (
+          <animated.div key={key} style={{ transform: props.xy.interpolate(trans) }} />
         ))}
       </div>
       <div className="z-10 cursor-default">
