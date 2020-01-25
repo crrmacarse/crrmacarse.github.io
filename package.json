@@ -17,6 +17,10 @@
     "deploy:windows": "npm run pre-deploy && npm version patch && copy 'dist/index.html' 'dist/404.html' && gh-pages -b master -d dist"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-regular-svg-icons": "^5.12.0",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/react-fontawesome": "^0.1.8",
     "@types/react-test-renderer": "^16.9.2",
     "core-js": "^3.6.4",
     "i18next": "^19.0.3",
@@ -38,7 +42,6 @@
     "@babel/preset-env": "^7.8.3",
     "@babel/preset-react": "^7.8.3",
     "@babel/register": "^7.0.0",
-    "@fortawesome/fontawesome-free": "^5.12.0",
     "@fullhuman/postcss-purgecss": "^2.0.5",
     "@testing-library/react-hooks": "^3.2.1",
     "@types/enzyme": "^3.10.4",

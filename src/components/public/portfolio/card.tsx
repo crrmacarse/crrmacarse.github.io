@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export interface CardProps {
     title: string,
@@ -36,8 +37,8 @@ const Card = ({
       {links
                 && (
                 <div>
-                  {links.website && <a href={links.website} className="mr-2" aria-label="link"><i className="far fa-window-maximize" /></a>}
-                  {links.github && <a href={links.github} className="mr-2" aria-label="link"><i className="fas fa-code" /></a>}
+                  {links.website && <a href={links.website} className="mr-2" aria-label="link"><FontAwesomeIcon icon="code" /></a>}
+                  {links.github && <a href={links.github} className="mr-2" aria-label="link"><FontAwesomeIcon icon="window-maximize" /></a>}
                 </div>
                 )}
     </div>

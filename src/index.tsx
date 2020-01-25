@@ -5,6 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Providers from 'providers';
 import 'i18n';
+import 'providers/fontawesome';
 
 ReactDOM.render(
   <Providers />,

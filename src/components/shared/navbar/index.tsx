@@ -1,16 +1,14 @@
 import React, { useState, Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink as Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as ROUTES from 'constants/routes';
 import ChangeButtonToggle from './change-language-toggle';
 
 export interface NavbarProps {
-    theme: string,
-    toggleTheme: () => void
+  theme: string,
+  toggleTheme: () => void
 }
-
-const darkModeIcon = <i className="far text-lg fa-moon" />;
-const lightModeIcon = <i className="fas text-lg fa-sun" />;
 
 // @REFACTOR: navbar toggling
 // @BUG: There seems to a bug that disregards initial click of
@@ -37,10 +35,18 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
     </Fragment>
   );
 
+  const renderIcon = () => {
+    if (theme === 'dark') {
+      return <FontAwesomeIcon icon="sun" />;
+    }
+
+    return <FontAwesomeIcon icon="moon" />;
+  };
+
   const priorityButtons = (
     <>
       <ChangeButtonToggle className="lg:mx-3 my-2 lg:my-0 cursor-pointer text-sm select-none uppercase" />
-      <div id="theme-toggler" className="mx-3 my-2 lg:my-0 cursor-pointer" role="button" tabIndex={0} onClick={toggleTheme} onKeyDown={toggleTheme}>{theme === 'dark' ? lightModeIcon : darkModeIcon}</div>
+      <div id="theme-toggler" className="mx-3 my-2 lg:my-0 cursor-pointer" role="button" tabIndex={0} onClick={toggleTheme} onKeyDown={toggleTheme}>{renderIcon()}</div>
     </>
   );
 
@@ -53,11 +59,11 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
       </div>
       <div className="flex lg:hidden">
         {priorityButtons}
-        <i className="fas fa-bars text-xl cursor-pointer my-2" role="button" aria-label="Handle toggle" tabIndex={0} onClick={handleToggle} onKeyDown={handleToggle} />
+        <FontAwesomeIcon icon="bars" className="fas fa-bars text-xl cursor-pointer my-2" aria-label="Handle toggle" onClick={handleToggle} onKeyDown={handleToggle} />
       </div>
       {open && (
         <div className="block lg:hidden w-full flex-shrink-0 lg:items-center lg:w-auto">
-            {navbarList}
+          {navbarList}
         </div>
       )}
       <div className="hidden lg:flex w-full flex-shrink-0 lg:items-center lg:w-auto">

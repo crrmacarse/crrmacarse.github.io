@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export interface ErrorBoundaryProps {
   hasError: boolean,
@@ -37,7 +38,7 @@ export default class ErrorBoundary extends Component<{}, ErrorBoundaryProps> {
     if (hasError) {
       return (
         <div className="error-boundary-section flex flex-col w-full h-screen justify-center items-center">
-          <i className="fas fa-exclamation-triangle m-10" />
+          <FontAwesomeIcon icon="exclamation-triangle" className="m-10 exclamation-warning" />
           <p className="text-4xl">Oops, Something went wrong :(</p>
           <a href="/" className="my-3 font-semibold">Return to the homepage.</a>
           {open && renderError()}
