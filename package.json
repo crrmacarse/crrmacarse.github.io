@@ -10,7 +10,7 @@
     "test": "jest --coverage",
     "test-watch": "jest --verbose --watch",
     "test-update": "jest --updateSnapshot",
-    "deploy": "npm version patch && npm run prod && gh-pages -b master -d dist"
+    "deploy": "npm version patch && npm run prod && cp dist/index.html dist/404.html && gh-pages -b master -d dist"
   },
   "dependencies": {
     "core-js": "^3.6.4",
