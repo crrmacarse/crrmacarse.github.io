@@ -13,8 +13,8 @@
     "test:watch": "jest --colors --watch",
     "test-update": "jest --updateSnapshot",
     "pre-deploy": "npm run test && npm run prod",
-    "deploy": "npm run pre-deploy && npm version patch && cp dist/index.html dist/404.html && gh-pages -b master -d dist",
-    "deploy:windows": "npm run pre-deploy && npm version patch && copy 'dist/index.html' 'dist/404.html' && gh-pages -b master -d dist"
+    "deploy": "npm run pre-deploy && npm version patch && cp dist/index.html dist/404.html && cp google21029c74dc702d92.html dist/ && gh-pages -b master -d dist",
+    "deploy:windows": "npm run pre-deploy && npm version patch && copy 'dist/index.html' 'dist/404.html' && google21029c74dc702d92.html dist/ && gh-pages -b master -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
