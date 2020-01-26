@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "homepage": "https://crrmacarse.github.io/",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "private": true,
   "scripts": {
     "hot": "webpack-dev-server --open --hot --profile --progress --colors --config=webpack.config.babel.js --env=hot",
@@ -12,7 +12,7 @@
     "test": "jest --verbose --colors --coverage",
     "test:watch": "jest --colors --watch",
     "test-update": "jest --updateSnapshot",
-    "sitemap":"npx babel-node sitemap-builder.js",
+    "sitemap": "npx babel-node sitemap-builder.js",
     "pre-deploy": "npm run test && npm run prod && npm run sitemap",
     "deploy": "npm run pre-deploy && npm version patch && cp dist/index.html dist/404.html && cp google21029c74dc702d92.html dist/ && gh-pages -b master -d dist",
     "deploy:windows": "npm run pre-deploy && npm version patch && copy 'dist/index.html' 'dist/404.html' && google21029c74dc702d92.html dist/ && gh-pages -b master -d dist"
