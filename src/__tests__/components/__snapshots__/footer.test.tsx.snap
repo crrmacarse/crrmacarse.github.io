@@ -19,7 +19,7 @@ exports[`<Footer /> matches the snapshot 1`] = `
         href="/contact"
         onClick={[Function]}
       >
-        footer.Get in touch
+        Get in touch.
       </a>
       <li>
         <a

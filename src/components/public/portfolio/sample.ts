@@ -110,6 +110,9 @@ export default [
     },
     description: 'Car Dealership project for a college client.',
     tags: ['c#', '.NET'],
+    links: {
+      github: 'https://github.com/crrmacarse/crdlrshp',
+    },
   },
   {
     title: 'Waffle Time website',

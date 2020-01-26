@@ -1,5 +1,6 @@
 .about-section {
-    height: 100vh;
+    padding: 5rem 0px;
+    min-height: 100vh;
 
     @include themed() {
       color: t($text);

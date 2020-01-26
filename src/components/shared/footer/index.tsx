@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="flex items-start justify-around lg:w-3/4 mx-auto py-10">
         <ul className="lg:w-1/6 m-3">
           <h4 className="font-bold mb-2">{t('footer.Still Interested?')}</h4>
-          <Link to={ROUTES.CONTACT}>{t('footer.Get in touch')}</Link>
+          <Link to={ROUTES.CONTACT}>{`${t('Get in touch')}.`}</Link>
           <li><a href="https://github.com/crrmacarse/portfolio-remake">{t('footer.Source Code')}</a></li>
           <li><Link to={ROUTES.MORE}>{t('footer.More')}</Link></li>
         </ul>

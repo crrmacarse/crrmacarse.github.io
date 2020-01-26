@@ -2,6 +2,8 @@ import React, { useState, Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink as Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun } from '@fortawesome/free-solid-svg-icons';
+import { faMoon } from '@fortawesome/free-regular-svg-icons';
 import * as ROUTES from 'constants/routes';
 import ChangeButtonToggle from './change-language-toggle';
 
@@ -35,19 +37,15 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
     </Fragment>
   );
 
-  const renderIcon = () => {
-    if (theme === 'dark') {
-      return <FontAwesomeIcon icon="sun" />;
-    }
-
-    return <FontAwesomeIcon icon="moon" />;
-  };
+  const icon = theme === 'dark' ? faSun : faMoon;
 
   const priorityButtons = (
-    <>
+    <Fragment>
       <ChangeButtonToggle className="lg:mx-3 my-2 lg:my-0 cursor-pointer text-sm select-none uppercase" />
-      <div id="theme-toggler" className="mx-3 my-2 lg:my-0 cursor-pointer" role="button" tabIndex={0} onClick={toggleTheme} onKeyDown={toggleTheme}>{renderIcon()}</div>
-    </>
+      <div id="theme-toggler" className="mx-3 my-2 lg:my-0 cursor-pointer" role="button" aria-label="Switch to Dark Mode" tabIndex={0} onClick={toggleTheme} onKeyDown={toggleTheme}>
+        <FontAwesomeIcon icon={icon} />
+      </div>
+    </Fragment>
   );
 
   const navbarClassName = open ? 'navbar-section-inverted' : 'navbar-section';
