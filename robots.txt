@@ -1,0 +1,5 @@
+Sitemap: http://crrmacarse.github.io/sitemap.xml
+User-agent: *
+Allow: /
+
+Disallow: */404

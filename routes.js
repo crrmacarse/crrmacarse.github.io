@@ -5,7 +5,7 @@ import * as ROUTES from './src/constants/routes';
 export default (
   <Route>
     {Object.values(ROUTES)
-      .filter((r) => r === '/')
+      .filter((r) => r !== '/')
       .map((r, key) => <Route key={key} path={r} />)}
   </Route>
 );
