@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "homepage": "https://crrmacarse.github.io/",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "private": true,
   "scripts": {
     "hot": "webpack-dev-server --open --hot --profile --progress --colors --config=webpack.config.babel.js --env=hot",
