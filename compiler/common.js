@@ -6,8 +6,8 @@ export const entry = join(process.cwd(), '/src/index.tsx');
 
 export const output = {
   path: join(process.cwd(), '/dist'),
-  filename: '[id].[hash].bundle.js',
-  chunkFilename: '[id].[hash].bundle.js',
+  filename: '[name].[hash].bundle.js',
+  chunkFilename: '[name].[hash].bundle.js',
   publicPath: '/',
 };
 
