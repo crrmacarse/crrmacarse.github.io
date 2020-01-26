@@ -1,5 +1,5 @@
 import React from 'react';
-import { Document, Page } from 'react-pdf';
+import { Document, Page } from 'react-pdf/dist/entry.webpack';
 import { useTranslation } from 'react-i18next';
 import ResumePDF from 'assets/pdfs/resume.pdf';
 
