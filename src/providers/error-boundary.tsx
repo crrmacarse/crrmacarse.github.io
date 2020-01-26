@@ -4,33 +4,36 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export interface ErrorBoundaryProps {
   hasError: boolean,
   open: boolean,
-  err: { error?: string, errorInfo?: { componentStack?: string } }
+  error: {
+    message?: string,
+    stack?: string,
+  },
 }
 
 export default class ErrorBoundary extends Component<{}, ErrorBoundaryProps> {
   constructor(props: any) {
     super(props);
-    this.state = { hasError: false, err: {}, open: false };
+    this.state = { hasError: false, error: {}, open: false };
   }
 
   componentDidCatch(error: any, errorInfo: any) {
-    this.setState({ hasError: true, err: { error, errorInfo } });
+    this.setState({ hasError: true, error });
 
     console.warn('%c Error: ', 'background: #dc3545; color: white', error, errorInfo.componentStack);
   }
 
   render() {
     const { children } = this.props;
-    const { hasError, err, open } = this.state;
+    const { hasError, error, open } = this.state;
     const handleToggle = () => this.setState((prevState) => ({ open: !prevState.open }));
 
     const renderError = () => {
-      const { error, errorInfo } = err;
+      const { message, stack } = error;
 
       return (
         <div className="m-3 p-3 border border-dashed max-w-4xl text-sm">
-          <h2 className="font-semibold mb-2">{error}</h2>
-          <p>{errorInfo}</p>
+          <h2 className="font-semibold mb-2">{message}</h2>
+          <p>{stack}</p>
         </div>
       );
     };

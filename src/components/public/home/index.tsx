@@ -12,6 +12,10 @@ const trans = (x: number, y: number) => `translate3d(${x}px,${y}px,0) translate3
 // It'll include ReadMes and stuff
 // The website will be the showcase of
 // what i could do
+// A feature-rich application written
+// with cosnsideration and care. A 200kb
+// bundle application
+// Learn more/Proceed
 const Home = () => {
   const { t } = useTranslation();
   const [trail, set] = useTrail<any>(3, () => (

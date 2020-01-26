@@ -13,7 +13,10 @@ export default {
     'Click here': 'Click here.',
     notice: 'For the meantime, you could visit the old website',
     here: 'here.',
+    More: 'More',
     'View Google Docs Version': 'View Google Docs Version',
     'Get in touch': 'Get in touch',
+    'Send a direct email': 'Send a direct email',
+    'Powered by': 'Powered by',
   },
 };
