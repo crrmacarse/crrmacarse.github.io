@@ -42,7 +42,7 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
   const priorityButtons = (
     <Fragment>
       <ChangeButtonToggle className="lg:mx-3 my-2 lg:my-0 cursor-pointer text-sm select-none uppercase" />
-      <div id="theme-toggler" className="mx-3 my-2 lg:my-0 cursor-pointer" role="button" aria-label="Switch to Dark Mode" tabIndex={0} onClick={toggleTheme} onKeyDown={toggleTheme}>
+      <div id="theme-toggler" title="Switch Theme" className="mx-3 my-2 lg:my-0 cursor-pointer" role="button" aria-label="Switch to Dark Mode" tabIndex={0} onClick={toggleTheme} onKeyDown={toggleTheme}>
         <FontAwesomeIcon icon={icon} />
       </div>
     </Fragment>
@@ -53,7 +53,7 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
   return (
     <nav className={`${navbarClassName} flex items-center justify-between flex-wrap fixed top-0 w-full py-8 lg:px-16 px-5`}>
       <div className="flex items-center flex-grow">
-        <Link className="font-semibold text-xl" to={ROUTES.HOME}>Christian Ryan R. Macarse</Link>
+        <Link title="Oh boy, What a handsome individual I am right? Now hire me." className="font-semibold text-xl" to={ROUTES.HOME}>Christian Ryan R. Macarse</Link>
       </div>
       <div className="flex lg:hidden">
         {priorityButtons}

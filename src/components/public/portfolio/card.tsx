@@ -38,8 +38,8 @@ const Card = ({
       {links
                 && (
                 <div>
-                  {links.website && <a href={links.website} className="mr-2" target="_blank" rel="noopener noreferrer" aria-label="link"><FontAwesomeIcon icon="external-link-alt" /></a>}
-                  {links.github && <a href={links.github} className="mr-2" target="_blank" rel="noopener noreferrer" aria-label="link"><FontAwesomeIcon icon={faGithub} /></a>}
+                  {links.website && <a href={links.website} className="mr-2" title="Check the website" target="_blank" rel="noopener noreferrer" aria-label="link"><FontAwesomeIcon icon="external-link-alt" /></a>}
+                  {links.github && <a href={links.github} className="mr-2" title="Check the source code" target="_blank" rel="noopener noreferrer" aria-label="link"><FontAwesomeIcon icon={faGithub} /></a>}
                 </div>
                 )}
     </div>

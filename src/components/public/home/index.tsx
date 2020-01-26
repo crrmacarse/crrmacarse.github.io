@@ -39,7 +39,6 @@ const Home = () => {
         <h1>{t('home.title')}</h1>
         <p className="text-xs lg:text-lg">
           {t('home.subtitle')}
-          <a href="https://crrmacarse.github.io/old-portfolio/" className="font-bold">{` ${t('Click here')}`}</a>
         </p>
       </div>
     </div>

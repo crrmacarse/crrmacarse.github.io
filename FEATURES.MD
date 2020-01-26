@@ -6,7 +6,7 @@
 - less than 1s load time!
 - Controlled dependencies
 - Optimized build with webpack loaders and plugins
-- Integrated with Google Analytics
+- Integrated with Google Analytics and Google Search Console
 - Localization support for tagalog and english(Custom writtej locales)
 - Dark mode!!!!!!
 - Frontend testing powered by Jest and Enzyme(Includes snapshot testing)
@@ -17,6 +17,7 @@
 - Gzip bundler for production
 - Asset optimizer
 - SEO optimized
+- Added dynamic sitemap builder on production build
 - Everything is in React hooks!
 - Configured TailwindCSS to only import pseudo class names that'll be used which in turns bring down the bundle size!
 - Optimized Fontawesome which will only included imported icons to the build!
@@ -30,15 +31,15 @@
 Feel free to clone this application and use it as your code base :)
 
 ```bash
-    # via https
+# via https
 
-    https://github.com/crrmacarse/crrmacarse.github.io.git
+https://github.com/crrmacarse/crrmacarse.github.io.git
 ```
 
 ```bash
-    # via ssh
+# via ssh
 
-    git@github.com:crrmacarse/crrmacarse.github.io.git
+git@github.com:crrmacarse/crrmacarse.github.io.git
 ```
 
 ---

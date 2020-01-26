@@ -54,6 +54,13 @@ exports[`<Footer /> matches the snapshot 1`] = `
       </h4>
       <li>
         <a
+          href="tel:+6399159039234"
+        >
+          Call
+        </a>
+      </li>
+      <li>
+        <a
           href="https://github.com/crrmacarse"
         >
           Github
@@ -131,6 +138,7 @@ exports[`<Footer /> matches the snapshot 1`] = `
                 </svg>
                 <span
                   className="font-bold text-sm ml-1 "
+                  title="React"
                 >
                   React
                 </span>
@@ -138,6 +146,7 @@ exports[`<Footer /> matches the snapshot 1`] = `
               <img
                 alt="typescript"
                 src="https://camo.githubusercontent.com/575bd49b0da0bd09b6a4f346a134e8c42ce9c58c/68747470733a2f2f616c65656e34322e6769746875622e696f2f6261646765732f7372632f747970657363726970742e737667"
+                title="Typescript"
               />
             </ul>
           </div>

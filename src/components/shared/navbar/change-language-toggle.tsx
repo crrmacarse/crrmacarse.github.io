@@ -15,7 +15,7 @@ const ChangeLanguage = ({ className }: { className?: string }) => {
 
   const renderLang = /^[en]/.test(i18n.language) ? 'EN' : 'PH';
 
-  return <div className={className} role="button" tabIndex={0} onClick={handleChangeLanguage} onKeyDown={handleChangeLanguage}>{renderLang}</div>;
+  return <div title="Switch Language" className={className} role="button" tabIndex={0} onClick={handleChangeLanguage} onKeyDown={handleChangeLanguage}>{renderLang}</div>;
 };
 
 export default ChangeLanguage;
