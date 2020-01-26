@@ -13,7 +13,7 @@ exports[`<Footer /> matches the snapshot 1`] = `
       <h4
         className="font-bold mb-2"
       >
-        footer.About the Project
+        footer.About this Project
       </h4>
       <li>
         <a

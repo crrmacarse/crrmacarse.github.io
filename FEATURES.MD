@@ -3,7 +3,7 @@
 - Written in Typescript ♥
 - Composed from scratch(https://github.com/crrmacarse/crrmacarse.github.io/commits/source?after=ef116c03b1a74113d2185ac22a4bdb293e5ac2b8+69)
 - 200kb bundle!
-- less than 1.5s load time!
+- less than 1s load time!
 - Controlled dependencies
 - Optimized build with webpack loaders and plugins
 - Integrated with Google Analytics

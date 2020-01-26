@@ -12,7 +12,7 @@ const Footer = () => {
     <div className="footer-section">
       <div className="flex items-start justify-around lg:w-3/4 mx-auto py-10">
         <ul className="lg:w-1/6 m-3">
-          <h4 className="font-bold mb-2">{t('footer.About the Project')}</h4>
+          <h4 className="font-bold mb-2">{t('footer.About this Project')}</h4>
           <li><a href="https://github.com/crrmacarse/crrmacarse.github.io">{t('footer.Source Code')}</a></li>
           <li><a href="https://github.com/crrmacarse/crrmacarse.github.io/blob/source/FEATURES.MD">{t('footer.Features')}</a></li>
           <li><a href="https://github.com/crrmacarse/crrmacarse.github.io">{t('footer.Roadmap')}</a></li>
