@@ -1,4 +1,5 @@
 name: Release
+
 on:
   push:
     branches:
@@ -11,33 +12,27 @@ env:
   FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
 jobs:
-  build-and-deploy:
+  publish:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.0.0
-
-    - uses: actions/setup-node@v1
+      - uses: actions/checkout@v2.0.0
+      - uses: actions/setup-node@v1
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org
 
-    - name: install
-      run: npm install
-    - name: build
-      run: npm run prod
-    - name: build sitemap
-      run: npm run sitemap
+      - run: npm install
+      - run: npm run prod
+      - run: npm run sitemap
+      - run: cp dist/index.html dist/404.html
+      - run: cp google21029c74dc702d92.html dist/
+      - run: cp robots.txt dist/
 
-    - name: resolve missing github page
-      run: cp dist/index.html dist/404.html
-    - name: copy search console config
-      run: cp google21029c74dc702d92.html dist/
-    - name: copy robots.txt
-      run: cp robots.txt dist/
+     - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: master
+          FOLDER: dist
 
-    - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: source
-        FOLDER: dist
+
