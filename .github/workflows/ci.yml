@@ -27,6 +27,6 @@ jobs:
     - name: lint
       run: npm run lint:prod
     - name: build
-      run: npm run prod:pipeline
+      run: npm run prod
     - name: test
       run: npm test

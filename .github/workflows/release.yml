@@ -15,24 +15,26 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.0.0
+    - uses: actions/checkout@v2.0.0
 
-      - uses: actions/setup-node@v1
-        with:
+    - name: Use node 12
+      uses: actions/setup-node@v1
+      with:
           node-version: 12
           registry-url: https://registry.npmjs.org
 
-      - run: npm install
+    - name: install
+      run: npm install
+    - name: lint
+      run: npm run sitemap
+    - name: build
+      run: npm run prod
+    - name: copy
+      run: npm run copy
 
-      - run: npm run prod
-
-      - run: npm run sitemap
-
-     # - run: npm run copy
-
-     - name: Build and Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: master
-          FOLDER: dist
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: master
+        FOLDER: dist
