@@ -16,10 +16,15 @@ jobs:
     steps:
     - uses: actions/checkout@v2.0.0
 
+    - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org
+
     - name: install
       run: npm install
     - name: build
-      run: npm run prod:pipeline
+      run: npm run prod
     - name: build sitemap
       run: npm run sitemap
 
