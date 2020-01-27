@@ -21,8 +21,8 @@ jobs:
 
     - name: Build
       run: |
+        rm -rf node_modules || true
         npm install
-        npm i html-webpack-plugin
         npm run prod:pipeline
         npm run sitemap
         cp dist/index.html dist/404.html
