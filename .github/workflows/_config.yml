@@ -1,4 +1,4 @@
-name: Build Bundle for Github Pages
+name: Deploy to GitHub Pages
 on:
   push:
     branches:
@@ -21,7 +21,6 @@ jobs:
 
     - name: Build
       run: |
-        rm -rf node_modules || true
         npm install
         npm run prod:pipeline
         npm run sitemap
@@ -29,7 +28,7 @@ jobs:
         cp google21029c74dc702d92.html dist/
         cp robots.txt dist/
 
-    - name: Deploy
+    - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
