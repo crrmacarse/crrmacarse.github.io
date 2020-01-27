@@ -16,14 +16,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.0.0
+
       - uses: actions/setup-node@v1
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org
 
       - run: npm install
+
       - run: npm run prod
+
       - run: npm run sitemap
+
       - run: npm run copy
 
      - name: Build and Deploy
@@ -32,5 +36,3 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: master
           FOLDER: dist
-
-
