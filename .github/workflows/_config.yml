@@ -1,4 +1,6 @@
-name: Build a Production bundle for Github Pages
+version: '1.0'
+
+name: Deploy to GitHub Pages
 on:
   push:
     branches:
