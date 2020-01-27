@@ -10,6 +10,7 @@
     "prod:pipeline": "webpack --profile --progress --config=compiler/production.pipeline.js",
     "analyze": "source-map-explorer './dist/*.js'",
     "lint": "eslint --ext .js,.ts,.tsx --ignore-pattern node_modules/",
+    "lint:prod": "eslint --ext .js,.ts,.tsx src --ignore-pattern src/**/*.test.tsx",
     "test": "jest --verbose --colors --coverage",
     "test:watch": "jest --colors --watch",
     "test-update": "jest --updateSnapshot",

@@ -1,6 +1,6 @@
-import React, { useState, ComponentType } from 'react';
+import React, { useState } from 'react';
 
-const Toggler = (WrappedComponent: ComponentType) => (props: any) => {
+const Toggler = (WrappedComponent: React.ComponentType) => (props: any) => {
   const [open, setOpen] = useState(false);
   const handleToggle = () => setOpen(!open);
 
