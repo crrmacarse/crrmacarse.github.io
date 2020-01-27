@@ -28,7 +28,7 @@ jobs:
 
       - run: npm run sitemap
 
-      - run: npm run copy
+     # - run: npm run copy
 
      - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
