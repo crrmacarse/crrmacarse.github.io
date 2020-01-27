@@ -1,5 +1,5 @@
-version: 2
-name: Greeting from Mona
+version: '2.0'
+name: Build Bundle for Github Pages
 on:
   push:
     branches:
@@ -7,7 +7,9 @@ on:
 
 env:
   NODE_ENV: production
+  PUBLIC_URL: http://crrmacarse.github.io/
   GA_TRACKING_CODE: ${{ secrets.GA_TRACKING_CODE }}
+  FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
 jobs:
   build-and-deploy:
@@ -29,8 +31,8 @@ jobs:
         cp robots.txt dist/
 
     - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         BRANCH: source
         FOLDER: dist
