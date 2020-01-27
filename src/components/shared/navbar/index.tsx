@@ -53,7 +53,7 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
   return (
     <nav className={`${navbarClassName} flex items-center justify-between flex-wrap fixed top-0 w-full py-8 lg:px-16 px-5`}>
       <div className="flex items-center flex-grow">
-        <Link title="Oh boy, What a handsome individual I am right? Now hire me." className="font-semibold text-xl" to={ROUTES.HOME}>Christian Ryan R. Macarse</Link>
+        <Link title="Hire me." className="font-semibold text-xl" to={ROUTES.HOME}>Christian Ryan R. Macarse</Link>
       </div>
       <div className="flex lg:hidden">
         {priorityButtons}

@@ -22,6 +22,7 @@ const Footer = () => {
           <h4 className="font-bold mb-2">{t('Get in touch')}</h4>
           <li><a href="tel:+6399159039234">{t('Call')}</a></li>
           <li><a href="https://github.com/crrmacarse">Github</a></li>
+          <li><a href="https://stackoverflow.com/users/10030210/crrmacarse">Stack Overflow</a></li>
           <li><a href="https://www.linkedin.com/in/christian-ryan-r-macarse-692974166/">LinkedIn</a></li>
           <li><a href="https://twitter.com/pablongbuhaymo">Twitter</a></li>
         </ul>

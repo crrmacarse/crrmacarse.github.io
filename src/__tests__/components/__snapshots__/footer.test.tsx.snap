@@ -68,6 +68,13 @@ exports[`<Footer /> matches the snapshot 1`] = `
       </li>
       <li>
         <a
+          href="https://stackoverflow.com/users/10030210/crrmacarse"
+        >
+          Stack Overflow
+        </a>
+      </li>
+      <li>
+        <a
           href="https://www.linkedin.com/in/christian-ryan-r-macarse-692974166/"
         >
           LinkedIn
