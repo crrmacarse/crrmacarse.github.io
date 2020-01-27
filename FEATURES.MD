@@ -6,6 +6,7 @@
 - less than 1s load time!
 - Controlled dependencies
 - Optimized build with webpack loaders and plugins
+- CI/CD Pipelines 👌
 - Integrated with Google Analytics and Google Search Console
 - Localization support for tagalog and english(Custom writtej locales)
 - Dark mode!!!!!!
