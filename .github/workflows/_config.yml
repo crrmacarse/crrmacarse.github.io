@@ -1,0 +1,41 @@
+name: Build a Production bundle for Github Pages
+on:
+  push:
+    branches:
+      -source
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+      with:
+        persist-credentials: false
+
+    - name: Pre
+      run: |
+        npm install
+        npm run lint .
+        npm run test
+
+    - name: Build
+      run: |
+        npm run prod
+        npm run sitemap
+        # npm version patch - this will probably retrigger the build
+        # https://medium.com/better-programming/create-your-own-changelog-generator-with-git-aefda291ea93
+
+    - name: Copy Files
+      run: |
+        cp dist/index.html dist/404.html
+        cp google21029c74dc702d92.html dist/
+        cp robots.txt dist/
+
+    - name: Build and Deploy
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        GA_TRACKING_CODE: ${{ secrets.GA_TRACKING_CODE }}
+        BRANCH: source
+        FOLDER: dist
