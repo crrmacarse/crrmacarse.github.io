@@ -1,10 +1,10 @@
-version: '1.0'
-
-name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      -source
+      - source
+
+env:
+  NODE_ENV: production
 
 jobs:
   build-and-deploy:
