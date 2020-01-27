@@ -22,7 +22,7 @@ jobs:
     - name: Build
       run: |
         npm install
-        npm run prod
+        npm run prod:pipeline
         npm run sitemap
         cp dist/index.html dist/404.html
         cp google21029c74dc702d92.html dist/
