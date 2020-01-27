@@ -25,10 +25,11 @@ jobs:
 
     - name: install
       run: npm install
-    - name: lint
-      run: npm run sitemap
     - name: build
       run: npm run prod
+    # https://babeljs.io/docs/en/next/babel-node.html#not-meant-for-production-use
+    # - name: build sitemap
+    #   run: npm run sitemap
     - name: copy
       run: npm run copy
 
