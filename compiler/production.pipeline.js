@@ -5,7 +5,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 
-export default {
+module.exports = {
   mode: 'production',
   devtool: 'source-map',
   entry: path.join(process.cwd(), '/src/index.tsx'),
