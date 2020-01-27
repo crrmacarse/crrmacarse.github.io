@@ -24,9 +24,7 @@ jobs:
       - run: npm install
       - run: npm run prod
       - run: npm run sitemap
-      - run: cp dist/index.html dist/404.html
-      - run: cp google21029c74dc702d92.html dist
-      - run: cp robots.txt dist
+      - run: npm run copy
 
      - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
