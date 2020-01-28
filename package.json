@@ -14,7 +14,7 @@
     "test:watch": "jest --colors --watch",
     "test-update": "jest --updateSnapshot",
     "sitemap": "npx babel-node sitemap-builder.js",
-    "copy": "cp dist/index.html dist/404.html && cp google21029c74dc702d92.html dist/ && && cp sitemap.xml dist/ && cp robots.txt dist/",
+    "copy": "cp dist/index.html dist/404.html && cp google21029c74dc702d92.html dist/ && cp sitemap.xml dist/ && cp robots.txt dist/",
     "copy:windows": "copy 'dist/index.html' 'dist/404.html' && google21029c74dc702d92.html dist/ && sitemap.xml dist/ && copy robots.txt dist/",
     "pre-deploy": "npm run test && npm run prod && npm run sitemap",
     "deploy": "npm run pre-deploy && npm version patch && npm run copy && gh-pages -b master -d dist",
