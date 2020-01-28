@@ -1,6 +1,8 @@
 import React from 'react';
+import Image from 'react-image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import NoImage from 'assets/images/no-image.jpg';
 
 export interface CardProps {
     title: string,
@@ -20,7 +22,7 @@ const Card = ({
   title, description, tags = [], image: { src, alt = 'Project' }, links,
 }: CardProps) => (
   <div className="max-w-sm rounded-lg overflow-hidden shadow-lg">
-    <img className="w-full object-cover h-64" src={src} alt={alt} />
+    <Image className="w-full object-cover h-64" src={[src, NoImage]} alt={alt} />
     <div className="p-4">
       <div className="font-bold text-xl mb-2">{title}</div>
       <p className="text-base">

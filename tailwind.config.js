@@ -1,6 +1,11 @@
+
+const { colors: { orange } } = require('tailwindcss/defaultTheme');
+
 module.exports = {
   theme: {
-    colors: {},
+    colors: {
+      orange,
+    },
     extend: {
       height: {
         128: '32rem',
@@ -41,5 +46,6 @@ module.exports = {
     'objectFit',
     'textAlign',
     'borderStyle',
+    'textColor',
   ],
 };

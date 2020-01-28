@@ -1,17 +1,19 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import UnderConstructionImage from 'assets/images/under-construction.png';
+import React, { useState } from 'react';
+import SUBROUTES from './data';
+import Nav from './nav';
 
 const Personal = () => {
-  const { t } = useTranslation();
+  const [current, setCurrent] = useState('Main');
+  const Component = SUBROUTES.find(({ value }) => value === current).component;
 
   return (
-    <div className="personal-section flex flex-col items-center justify-center">
-      <img className="h-64 m-10" src={UnderConstructionImage} alt="ongoing" />
-      <p className="text-sm">
-        {t('notice')}
-        <a href="https://crrmacarse.github.io/old-portfolio/" className="font-bold">{t('here')}</a>
-      </p>
+    <div className="personal-section flex lg:flex-row flex-col justify-between">
+      <Nav routes={SUBROUTES} current={current} setCurrent={(value) => setCurrent(value)} />
+      <div className="component lg:w-3/4">
+        <div className="mr-auto">
+          <Component />
+        </div>
+      </div>
     </div>
   );
 };

@@ -3,11 +3,13 @@ $text: 'text';
 $text-important: 'text-important';
 $text-secondary: 'text-secondary';
 $bg-secondary: 'bg-secondary';
+$bg-tertiary: 'bg-tertiary';
 
 $themes: (
         default: (
                 bg: $bg--light,
                 bg-secondary: $bg--light--secondary,
+                bg-tertiary: $bg--light--tertiary,
                 text: $text--light,
                 text-important: $text--imp--light,
                 text-secondary: $text--2--light,
@@ -15,6 +17,7 @@ $themes: (
         dark: (
                 bg: $bg--dark,
                 bg-secondary: $bg--dark--secondary,
+                bg-tertiary: $bg--dark--tertiary,
                 text: $text--dark,
                 text-important: $text--imp--dark,
                 text-secondary: $text--2--dark,
@@ -35,7 +38,7 @@ $themes: (
       }
     }
   }
-  
+
   @function t($key) {
     @return map-get($theme-map, $key);
   }
