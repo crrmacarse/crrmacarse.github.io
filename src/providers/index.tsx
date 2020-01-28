@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import PublicRoutes from 'routes/public';
+import Routes from 'routes';
 import useDarkMode from 'hooks/useDarkMode';
 import BaseLoader from 'components/shared/loader/base';
 import Navbar from 'components/shared/navbar';
@@ -18,7 +18,7 @@ export default () => {
         <ErrorBoundary>
           <Suspense fallback={<BaseLoader />}>
             <Navbar theme={theme} toggleTheme={() => toggleTheme()} />
-            <PublicRoutes />
+            <Routes />
             <Footer />
           </Suspense>
         </ErrorBoundary>

@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "homepage": "https://crrmacarse.github.io/",
-  "version": "1.0.31",
+  "version": "1.0.32",
   "private": true,
   "scripts": {
     "hot": "webpack-dev-server --open --hot --profile --progress --colors --config=webpack.config.babel.js --env=hot",
@@ -27,6 +27,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
     "core-js": "^3.6.4",
+    "firebase": "^7.7.0",
     "i18next": "^19.0.3",
     "i18next-browser-languagedetector": "^4.0.1",
     "lodash": "^4.17.15",

@@ -1,9 +1,7 @@
 @import "base/base";
 @import "vendor/tailwind";
-@import "vendor/placeholderLoading";
 @import "components/baseLoader";
 @import "components/navbar";
 @import "components/footer";
 @import "components/errorBoundary";
 @import "components/notFound";
-@import "pages/public";
