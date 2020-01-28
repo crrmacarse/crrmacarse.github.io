@@ -6,10 +6,16 @@ on:
       - source
 
 env:
-  NODE_ENV: production
   PUBLIC_URL: http://crrmacarse.github.io/
   GA_TRACKING_CODE: ${{ secrets.GA_TRACKING_CODE }}
-  FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+  FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+  FIREBASE_AUTH_DOMAIN: ${{ secrets.FIREBASE_AUTH_DOMAIN }}
+  FIREBASE_DATABASE_URL: ${{ secrets.FIREBASE_DATABASE_URL }}
+  FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
+  FIREBASE_STORAGE_BUCKET: ${{ secrets.FIREBASE_STORAGE_BUCKET }}
+  FIREBASE_SENDER_ID: ${{ secrets.FIREBASE_SENDER_ID }}
+  FIREBASE_APP_ID:1: ${{ secrets.FIREBASE_APP_ID:1 }}
+  FIREBASE_MEASUREMENT_ID: ${{ secrets.FIREBASE_MEASUREMENT_ID }}
 
 jobs:
   publish:

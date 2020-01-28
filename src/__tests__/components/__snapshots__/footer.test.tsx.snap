@@ -17,6 +17,14 @@ exports[`<Footer /> matches the snapshot 1`] = `
       </h4>
       <li>
         <a
+          href="/admin/login"
+          onClick={[Function]}
+        >
+          Sign in as Admin
+        </a>
+      </li>
+      <li>
+        <a
           href="https://github.com/crrmacarse/crrmacarse.github.io"
         >
           footer.Source Code

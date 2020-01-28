@@ -11,3 +11,6 @@ export const CONTACT = '/contact';
 export const RESUME = '/resume';
 export const PERSONAL = '/personal';
 export const MORE = '/more';
+
+export const ADMIN = '/admin';
+export const ADMIN_LOGIN = '/admin/login';
