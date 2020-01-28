@@ -7,7 +7,7 @@ const MainPage = () => (
   <div className="">
     <div className="title">
       <h1 className="text-5xl">Not so really Personal Matters</h1>
-      <p>This is where intenend to play around with api and stuff.</p>
+      <p>This is where I intend to play around with api and stuff.</p>
     </div>
     <div className="content">
       <p>Some pages is either ongoing or with initial data.</p>

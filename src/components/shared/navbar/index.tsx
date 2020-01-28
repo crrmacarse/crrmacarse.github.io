@@ -30,10 +30,10 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
 
   const navbarList = (
     <Fragment>
-      <Link {...navbarRepetetiveProps} to={ROUTES.PORTFOLIO}>{t('navbar.Portfolio')}</Link>
-      <Link {...navbarRepetetiveProps} to={ROUTES.RESUME}>{t('navbar.Resume')}</Link>
-      <Link {...navbarRepetetiveProps} to={ROUTES.ABOUT}>{t('navbar.About')}</Link>
-      <Link {...navbarRepetetiveProps} to={ROUTES.PERSONAL}>{t('navbar.Personal')}</Link>
+      <Link {...navbarRepetetiveProps} to={(location) => ({ ...location, pathname: ROUTES.PORTFOLIO })}>{t('navbar.Portfolio')}</Link>
+      <Link {...navbarRepetetiveProps} to={(location) => ({ ...location, pathname: ROUTES.RESUME })}>{t('navbar.Resume')}</Link>
+      <Link {...navbarRepetetiveProps} to={(location) => ({ ...location, pathname: ROUTES.ABOUT })}>{t('navbar.About')}</Link>
+      <Link {...navbarRepetetiveProps} to={(location) => ({ ...location, pathname: ROUTES.PERSONAL })}>{t('navbar.Personal')}</Link>
     </Fragment>
   );
 
@@ -42,7 +42,7 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
   const priorityButtons = (
     <Fragment>
       <ChangeButtonToggle className="lg:mx-3 my-2 lg:my-0 cursor-pointer text-sm select-none uppercase" />
-      <div id="theme-toggler" title="Switch Theme" className="mx-3 my-2 lg:my-0 cursor-pointer" role="button" aria-label="Switch to Dark Mode" tabIndex={0} onClick={toggleTheme} onKeyDown={toggleTheme}>
+      <div id="theme-toggler" title="Switch Theme" className="mx-3 my-2 lg:my-0 cursor-pointer" role="button" aria-label="Switch to Dark Mode" tabIndex={-1} onClick={toggleTheme} onKeyDown={toggleTheme}>
         <FontAwesomeIcon icon={icon} />
       </div>
     </Fragment>
@@ -53,7 +53,7 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
   return (
     <nav className={`${navbarClassName} flex items-center justify-between flex-wrap fixed top-0 w-full py-8 lg:px-16 px-5`}>
       <div className="flex items-center flex-grow">
-        <Link title="Hire me." className="font-semibold text-xl" to={ROUTES.HOME}>Christian Ryan R. Macarse</Link>
+        <Link title="Hire me." className="font-semibold text-xl" to={(location) => ({ ...location, pathname: ROUTES.HOME })}>Christian Ryan R. Macarse</Link>
       </div>
       <div className="flex lg:hidden">
         {priorityButtons}

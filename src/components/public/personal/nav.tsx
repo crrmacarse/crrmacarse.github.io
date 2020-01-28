@@ -1,27 +1,28 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export interface NavProps {
   routes: { value: string, component: React.ComponentType }[],
   current: string,
-  setCurrent: (value: string) => void,
 }
 
-const Nav = ({ routes, current, setCurrent }: NavProps) => (
+const Nav = ({ routes, current }: NavProps) => (
   <div className="navigation text-xl">
-    <div className="navigation-links">
+    <ul className="navigation-links">
       {routes.map(({ value }, key) => (
-        <div
-          key={key}
-          role="button"
-          className={`py-1 ${current === value && 'text-orange-600 font-bold'}`}
-          tabIndex={key}
-          onClick={() => setCurrent(value)}
-          onKeyDown={() => setCurrent(value)}
-        >
-          {value}
-        </div>
+        <li key={key}>
+          <Link
+            to={{
+              state: value,
+            }}
+            className={`py-1 ${current === value && 'text-orange-600 font-bold'}`}
+          >
+            {value}
+          </Link>
+        </li>
+
       ))}
-    </div>
+    </ul>
 
   </div>
 );
