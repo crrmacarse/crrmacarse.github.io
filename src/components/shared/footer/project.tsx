@@ -9,9 +9,9 @@ const Project = ({ translate }: { translate: any }) => (
       <Link to={(location) => ({ ...location, pathname: ADMIN_LOGIN })}>Sign in as Admin</Link>
     </li>
     <li><a href="https://github.com/crrmacarse/crrmacarse.github.io">{translate('footer.Source Code')}</a></li>
-    <li><a href="https://github.com/crrmacarse/crrmacarse.github.io/blob/source/FEATURES.MD">{translate('footer.Features')}</a></li>
-    <li><a href="https://github.com/crrmacarse/crrmacarse.github.io">{translate('footer.Roadmap')}</a></li>
-    <li><a href="https://github.com/crrmacarse/crrmacarse.github.io/blob/source/CHANGELOG.MD">{translate('footer.Changelogs')}</a></li>
+    <li><a href="https://github.com/crrmacarse/crrmacarse.github.io/blob/source/docs/FEATURES.MD">{translate('footer.Features')}</a></li>
+    <li><a href="https://github.com/crrmacarse/crrmacarse.github.io/blob/source/docs/ROADMAP.MD">{translate('footer.Roadmap')}</a></li>
+    <li><a href="https://github.com/crrmacarse/crrmacarse.github.io/blob/source/docs/CHANGELOG.MD">{translate('footer.Changelogs')}</a></li>
   </ul>
 );
 

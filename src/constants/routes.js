@@ -14,3 +14,12 @@ export const MORE = '/more';
 
 export const ADMIN = '/admin';
 export const ADMIN_LOGIN = '/admin/login';
+export const ADMIN_PROJECTS = '/admin/projects';
+export const ADMIN_PROJECTS_ADD = '/admin/projects/add';
+export const ADMIN_PROJECTS_EDIT = '/admin/projects/:id/edit';
+export const ADMIN_BLOG = '/admin/blog';
+export const ADMIN_BLOG_ADD = '/admin/blog/add';
+export const ADMIN_BLOG_EDIT = '/admin/blog/:id/edit';
+export const ADMIN_PERSONAL = '/admin/personal';
+export const ADMIN_PERSONAL_ADD = '/admin/personal/add';
+export const ADMIN_PERSONAL_EDIT = '/admin/personal/:id/edit';

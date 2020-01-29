@@ -1,8 +1,7 @@
-import 'scss/public.scss';
 import React, { lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import * as ROUTES from 'constants/routes';
-import NotFound from './not-found';
+import NotFound from 'routes/not-found';
 
 const Home = lazy(() => import('components/public/home'));
 const Portfolio = lazy(() => import('components/public/portfolio'));

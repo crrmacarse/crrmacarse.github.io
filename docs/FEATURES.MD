@@ -11,6 +11,8 @@
 - Localization support for tagalog and english(Custom writtej locales)
 - Dark mode!!!!!!
 - Frontend testing powered by Jest and Enzyme(Includes snapshot testing)
+- Database powered by Firebase
+- Project included with its own Content Management System
 - Linted code(Airbnb code guidelines). Thanks to ESLint!
 - Bundle splitting by chunks
 - Code splitting with React lazy
