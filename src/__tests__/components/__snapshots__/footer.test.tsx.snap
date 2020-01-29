@@ -32,21 +32,21 @@ exports[`<Footer /> matches the snapshot 1`] = `
       </li>
       <li>
         <a
-          href="https://github.com/crrmacarse/crrmacarse.github.io/blob/source/FEATURES.MD"
+          href="https://github.com/crrmacarse/crrmacarse.github.io/blob/source/docs/FEATURES.MD"
         >
           footer.Features
         </a>
       </li>
       <li>
         <a
-          href="https://github.com/crrmacarse/crrmacarse.github.io"
+          href="https://github.com/crrmacarse/crrmacarse.github.io/blob/source/docs/ROADMAP.MD"
         >
           footer.Roadmap
         </a>
       </li>
       <li>
         <a
-          href="https://github.com/crrmacarse/crrmacarse.github.io/blob/source/CHANGELOG.MD"
+          href="https://github.com/crrmacarse/crrmacarse.github.io/blob/source/docs/CHANGELOG.MD"
         >
           footer.Changelogs
         </a>
