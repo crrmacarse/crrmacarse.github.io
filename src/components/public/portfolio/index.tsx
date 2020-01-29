@@ -1,27 +1,27 @@
-import React, { useEffect, useState } from 'react';
-import db from 'providers/firebase/db';
-import isEmpty from 'lodash/isEmpty';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { getProjects } from 'actions/projects';
 import Card from './card';
+
+interface PortfolioProps {
+  fetchList: () => void,
+  isFetching: boolean,
+  list: any,
+}
 
 // @TODO:
 // not perfectly centered. find alternative
 // add filter here to personal and company related projects
 // add pagination?
-const Portfolio = () => {
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    db.ref('/projects').once('value').then((snapshot) => {
-      setProjects(snapshot.val());
-    });
-  }, []);
+const Portfolio = ({ list, isFetching, fetchList }: PortfolioProps) => {
+  useEffect(() => { fetchList(); }, []);
 
   return (
     <div className="portfolio-section">
       <ul className="flex flex flex-wrap justify-start content-center items-baseline w-11/12 mx-auto">
-        {isEmpty(projects) && <p>Fetching...</p>}
-        {projects.map((project) => (
-          <li className="m-5" key={project.id}>
+        {isFetching && <p>Fetching...</p>}
+        {list.map((project: any, key: number) => (
+          <li className="m-5" key={key}>
             <Card {...project} />
           </li>
         ))}
@@ -30,4 +30,13 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+const mapStateToProps = ({ projects }: {projects: any}) => ({
+  list: projects.list,
+  isFetching: projects.isFetching,
+});
+
+const mapDispatchToProps = {
+  fetchList: getProjects,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Portfolio);
