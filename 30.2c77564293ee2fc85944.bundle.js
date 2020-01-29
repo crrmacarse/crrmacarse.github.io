@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[30],{565:function(e,t,n){"use strict";n.r(t);var a=n(0),c=n.n(a),l=n(17),s=n(4);t.default=function(){return c.a.createElement("div",{className:"admin-login-section flex items-center h-screen justify-center flex-col"},c.a.createElement("h1",{className:"text-3xl mb-2"},"ADMIN LOGIN",c.a.createElement("b",null," (ONGOING)")),c.a.createElement(l.b,{to:s.b},"GO TO DASHBOARD"))}}}]);
+//# sourceMappingURL=30.2c77564293ee2fc85944.bundle.js.map
