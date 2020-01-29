@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{556:function(e,n,t){"use strict";t.r(n);var a=t(0),c=t.n(a),o=t(138),s=t.n(o);n.default=function(){return Object(a.useEffect)((function(){s.a.database().ref("/projects").once("value").then((function(e){console.warn("got ya",e.val())}))}),[]),c.a.createElement("div",{className:"admin-dashboard-section flex items-center h-screen justify-center flex-col"},c.a.createElement("h1",null,"ADMIN DASHBOARD"))}}}]);
-//# sourceMappingURL=11.785451374ed191502cd6.bundle.js.map

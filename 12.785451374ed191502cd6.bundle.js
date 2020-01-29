@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{557:function(e,t,n){"use strict";n.r(t);var a=n(0),c=n.n(a),i=n(23),s=n(9);t.default=function(){return c.a.createElement("div",{className:"admin-login-section flex items-center h-screen justify-center flex-col"},c.a.createElement("h1",{className:"text-3xl mb-2"},"ADMIN LOGIN(Firebase integration)"),c.a.createElement(i.b,{to:s.b},"GO TO DASHBOARD"))}}}]);
-//# sourceMappingURL=12.785451374ed191502cd6.bundle.js.map
