@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react';
 
-export default () => {
-  const [theme, setTheme] = useState('default');
+type themeProps = 'default' | 'dark'
+type themeStateProps = { theme: themeProps, isFirstTime: boolean }
 
-  const handleThemeChange = (newTheme: string) => {
+export default () => {
+  const [{ theme, isFirstTime }, setTheme] = useState<themeStateProps>({ theme: 'default', isFirstTime: false });
+
+  const handleThemeChange = (newTheme: themeProps, change: boolean = false) => {
     window.localStorage.setItem('theme', newTheme);
-    setTheme(newTheme);
+    setTheme({ theme: newTheme, isFirstTime: change });
   };
 
   const toggleTheme: any = () => {
@@ -22,13 +25,13 @@ export default () => {
     const localTheme = window.localStorage.getItem('theme');
 
     if (variants.includes(localTheme)) {
-      handleThemeChange(localTheme);
+      handleThemeChange(localTheme as themeProps);
     } else if (isDarkMode) {
-      handleThemeChange('dark');
+      handleThemeChange('dark', true);
     } else {
-      handleThemeChange('default');
+      handleThemeChange('default', true);
     }
   }, []);
 
-  return { theme, toggleTheme };
+  return { theme, isFirstTime, toggleTheme };
 };

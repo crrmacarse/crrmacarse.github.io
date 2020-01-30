@@ -1,22 +1,37 @@
 import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import Navbar, { NavbarProps } from 'components/shared/navbar';
+import { Navbar, NavbarProps } from 'components/shared/navbar';
 
-let wrapper: ShallowWrapper<NavbarProps>;
+// https://redux.js.org/recipes/writing-tests/
+// learn more about dive(): https://github.com/airbnb/enzyme/issues/1002
+const setup = () => {
+  const props = {
+    visited: false,
+  };
 
-beforeEach(() => {
-  let mockFunc = () => jest.fn();
-  const component = <Navbar theme={"default"} toggleTheme={mockFunc} />
+const mockFunc = () => jest.fn();
+  const component = <Navbar theme={"default"} isFirstTime={false} toggleTheme={mockFunc} visited={false} />
 
-  wrapper = shallow(component)
-});
+  const wrapper: ShallowWrapper<NavbarProps> = shallow(component);
+
+  return {
+    props,
+    wrapper,
+  };
+};
 
 // @TODO: Play with functions inside here
 describe('<Navbar />', () => {
-  it('renders', () => { wrapper });
+  it('should render self and submcomponents', () => {
+    const { wrapper } = setup()
 
-  it('has props', () => {
-    expect(wrapper.prop('theme')).not.toBeNull();
-    expect(wrapper.prop('toggleTheme')).not.toBeNull();
+    expect(wrapper.find('#main').text()).toBe('Christian Ryan R. Macarse');
+    expect(wrapper.props().visited).not.toBeNull();
+    expect(wrapper.props().theme).not.toBeNull();
+    expect(wrapper.props().isFirstTime).not.toBeNull();
+    expect(wrapper.props().toggleTheme).not.toBeNull();
+    // expect(wrapper.props().visited).toBeBoolean();
+    // expect(wrapper.props().theme).toBeOneOf(['default', 'dark']);
+    // expect(wrapper.props().isFirstTime).toBeBoolean();
   })
 });

@@ -10,7 +10,6 @@ interface PortfolioProps {
 }
 
 // @TODO:
-// not perfectly centered. find alternative
 // add filter here to personal and company related projects
 // add pagination?
 const Portfolio = ({ list, isFetching, fetchList }: PortfolioProps) => {
@@ -21,7 +20,7 @@ const Portfolio = ({ list, isFetching, fetchList }: PortfolioProps) => {
       <ul className="flex flex flex-wrap justify-start content-center items-baseline w-11/12 mx-auto">
         {isFetching && <p>Fetching...</p>}
         {list.map((project: any, key: number) => (
-          <li className="m-5" key={key}>
+          <li className="px-1 py-5 mx-auto" key={key}>
             <Card {...project} />
           </li>
         ))}

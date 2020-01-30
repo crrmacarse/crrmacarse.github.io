@@ -9,7 +9,7 @@ const About = () => {
 
   return (
     <div className="about-section flex flex-col items-center justify-center">
-      <div className="flex flex-col md:flex-row max-w-6xl">
+      <div className="flex flex-col md:flex-row max-w-6xl mx-auto">
         <Image className="h-128 w-max-64 p-5" src={[ImageSrc, NoImage]} alt="@crrmacarse" title="Damn, you look good bruh" />
         <div className="mx-5">
           <h1 className="text-5xl">

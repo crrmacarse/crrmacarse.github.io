@@ -7,20 +7,22 @@ import useDarkMode from 'hooks/useDarkMode';
 import BaseLoader from 'components/shared/loader/base';
 import Navbar from 'components/shared/navbar';
 import Footer from 'components/shared/footer';
+import VisitedChecker from './visited-checker';
 import ErrorBoundary from './error-boundary';
 
 // @TODO: Suspense fallback should have delay for
 // better UX
 export default () => {
-  const { theme, toggleTheme } = useDarkMode();
+  const { theme, isFirstTime, toggleTheme } = useDarkMode();
 
   return (
     <ReduxProvider store={store}>
+      <VisitedChecker />
       <div className={`theme theme--${theme}`}>
         <Router>
           <ErrorBoundary>
             <Suspense fallback={<BaseLoader />}>
-              <Navbar theme={theme} toggleTheme={() => toggleTheme()} />
+              <Navbar theme={theme} isFirstTime={isFirstTime} toggleTheme={() => toggleTheme()} />
               <Routes />
               <Footer />
             </Suspense>

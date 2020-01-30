@@ -17,8 +17,8 @@
     "copy": "cp essentials/* dist",
     "copy:windows": "copy essentials/* dist",
     "pre-deploy": "npm run test && npm run prod && npm run sitemap",
-    "deploy": "npm run pre-deploy && npm version patch && npm run copy && gh-pages -b master -d dist",
-    "deploy:windows": "npm run pre-deploy && npm version patch && npm run copy:windows && gh-pages -b master -d dist"
+    "deploy": "npm run pre-deploy && npm run copy && gh-pages -b master -d dist",
+    "deploy:windows": "npm run pre-deploy && npm run copy:windows && gh-pages -b master -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
