@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-      - source
+      - release
 
 env:
   PUBLIC_URL: http://crrmacarse.github.io/
