@@ -1,10 +1,16 @@
+import { DefinePlugin } from 'webpack';
 import CompressionPlugin from 'compression-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
+import { GenerateSW } from 'workbox-webpack-plugin';
 import {
   entry, output, moduleResolver, rules, plugins,
 } from './common';
 
+// DefinePlugin
+// It is my attempt to remove redux-logger in bundle
+// but it seems to fail
+// https://webpack.js.org/plugins/define-plugin/
 export default {
   mode: 'production',
   devtool: 'source-map',
@@ -21,7 +27,11 @@ export default {
     ],
   },
   plugins: [
+    new DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production'),
+    }),
     ...plugins,
+    new GenerateSW(),
     new CompressionPlugin(),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
