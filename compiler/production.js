@@ -1,5 +1,6 @@
 import { DefinePlugin } from 'webpack';
 import CompressionPlugin from 'compression-webpack-plugin';
+import BrotliPlugin from 'brotli-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
 import { GenerateSW } from 'workbox-webpack-plugin';
@@ -37,6 +38,12 @@ export default {
       skipWaiting: true,
     }),
     new CompressionPlugin(),
+    new BrotliPlugin({
+      asset: '[path].br[query]',
+      test: /\.(js|css|html|svg)$/,
+      threshold: 10240,
+      minRatio: 0.8,
+    }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
