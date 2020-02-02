@@ -49,7 +49,7 @@ const RedditPage = () => {
           {isEmpty(subreddits) && <p>Fetching...</p>}
           {subreddits.map(({ data }, key) => (
             <li>
-              <a key={key} href={`http://www.reddit.com/${data.permalink}`}>{data.title}</a>
+              <a key={key} href={`http://www.reddit.com/${data.permalink}`} target="_blank" rel="noopener noreferrer">{data.title}</a>
             </li>
           ))}
         </ul>

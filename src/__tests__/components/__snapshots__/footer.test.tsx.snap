@@ -5,10 +5,10 @@ exports[`<Footer /> matches the snapshot 1`] = `
   className="footer-section"
 >
   <div
-    className="flex items-start justify-around lg:w-3/4 mx-auto py-10"
+    className="flex items-start justify-around lg:w-3/4 mx-auto py-10 flex-wrap lg:flex-no-wrap"
   >
     <ul
-      className="lg:w-1/6 m-3"
+      className="lg:w-1/6 w-1/2 p-3"
     >
       <h4
         className="font-bold mb-2"
@@ -53,7 +53,7 @@ exports[`<Footer /> matches the snapshot 1`] = `
       </li>
     </ul>
     <ul
-      className="lg:w-1/6 m-3"
+      className="lg:w-1/6 w-1/2 p-3"
     >
       <h4
         className="font-bold mb-2"
@@ -97,7 +97,7 @@ exports[`<Footer /> matches the snapshot 1`] = `
       </li>
     </ul>
     <div
-      className="flex-grow m-3"
+      className="flex-grow p-3"
     >
       <h4
         className="font-bold mb-2"

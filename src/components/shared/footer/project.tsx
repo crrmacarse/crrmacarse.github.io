@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ADMIN_LOGIN } from 'constants/routes';
 
 const Project = ({ translate }: { translate: any }) => (
-  <ul className="lg:w-1/6 m-3">
+  <ul className="lg:w-1/6 w-1/2 p-3">
     <h4 className="font-bold mb-2">{translate('footer.About this Project')}</h4>
     <li>
       <Link to={(location) => ({ ...location, pathname: ADMIN_LOGIN })}>Sign in as Admin</Link>

@@ -41,10 +41,10 @@ const Footer = () => {
 
   return (
     <div className="footer-section">
-      <div className="flex items-start justify-around lg:w-3/4 mx-auto py-10">
+      <div className="flex items-start justify-around lg:w-3/4 mx-auto py-10 flex-wrap lg:flex-no-wrap">
         <Project translate={t} />
         <Contact translate={t} />
-        <div className="flex-grow m-3">
+        <div className="flex-grow p-3">
           <h4 className="font-bold mb-2">{t('footer.Overview')}</h4>
           <div className="lg:max-w-2xl">
             <p className="">{t('footer.description')}</p>

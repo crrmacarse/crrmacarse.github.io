@@ -2,7 +2,7 @@
 
 exports[`<NotFound /> matches the snapshot 1`] = `
 <div
-  className="not-found-section flex flex-col w-full h-screen justify-center items-center"
+  className="not-found-section flex flex-col w-full h-screen justify-center items-center text-center"
 >
   <p
     className="text-6xl"

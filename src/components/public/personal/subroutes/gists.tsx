@@ -27,7 +27,7 @@ const GistsPage = () => {
           {isEmpty(gists) && <p>Fetching...</p>}
           {gists.map((gist) => (
             <li key={gist.id}>
-              <a href={gist.url}>{gist.description}</a>
+              <a href={gist.html_url} target="_blank" rel="noopener noreferrer">{gist.description}</a>
             </li>
           ))}
         </ul>

@@ -1,5 +1,6 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
+import 'raf/polyfill';
 import 'providers/personal';
 import 'scss/index.scss';
 import React from 'react';
@@ -15,7 +16,9 @@ ReactDOM.render(
   document.getElementById('root'),
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+// serviceWorker registration is from
+// CRA with a little modifications
+// https://create-react-app.dev/docs/making-a-progressive-web-app/
+// https://developers.google.com/web/fundamentals/primers/service-workers
+// https://developers.google.com/web/tools/workbox/guides/get-started
 serviceWorker.register();

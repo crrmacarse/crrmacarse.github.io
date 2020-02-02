@@ -16,7 +16,7 @@ This is a personal project of mine. Idk what to put in here yet. So i might exte
 - Composed from scratch(https://github.com/crrmacarse/crrmacarse.github.io/commits/source?after=ef116c03b1a74113d2185ac22a4bdb293e5ac2b8+69)
 - 200kb bundle size with less than 1s load time! ⚡
 - Controlled dependencies with production build optimizers and overall strict code structure(No more than a 100 line of codes please).
-- Integrated with Google Analytics; Localization(Custom Tagalog and English); CI/CD Pipelines; optimized SEO, standalone CMS(Firebase); Redux Powered; and <b>D A R K M O D E</b>!
+- Integrated with Google Analytics; Localization(Custom Tagalog and English); CI/CD Pipelines; optimized SEO, standalone CMS(Firebase); Redux Powered; Offline Mode via ServiceWorker and <b>D A R K M O D E</b>!
 - and more!
 
 ### LINKS

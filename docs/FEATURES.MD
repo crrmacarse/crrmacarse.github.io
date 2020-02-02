@@ -19,6 +19,7 @@
 - CSS Optimization with PostCSS(removes unwanted css in production build)
 - Gzip bundler for production
 - Asset optimizer
+- Offline mode powered by Google's workbox webpack plugin and CRA's service worker!
 - SEO optimized
 - Added dynamic sitemap builder on production build
 - Everything is in React hooks!
