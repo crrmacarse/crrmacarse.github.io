@@ -31,7 +31,11 @@ export default {
       'process.env.NODE_ENV': JSON.stringify('production'),
     }),
     ...plugins,
-    new GenerateSW(),
+    new GenerateSW({
+      swDest: 'service-worker.js',
+      clientsClaim: true,
+      skipWaiting: true,
+    }),
     new CompressionPlugin(),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
