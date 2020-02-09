@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[21],{584:function(e,n,t){"use strict";t.r(n);var a=t(0),l=t.n(a);n.default=function(){return l.a.createElement("div",null,l.a.createElement("div",{className:"title"},l.a.createElement("h1",{className:"text-5xl"},"Trending News Right Now"),l.a.createElement("p",null,"Currently researching for a well documented news api")),l.a.createElement("div",{className:"content"}))}}}]);
+//# sourceMappingURL=21.a0a45eaabd5dd3ababae.bundle.js.map
