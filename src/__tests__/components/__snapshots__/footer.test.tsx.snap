@@ -17,14 +17,6 @@ exports[`<Footer /> matches the snapshot 1`] = `
       </h4>
       <li>
         <a
-          href="/admin/login"
-          onClick={[Function]}
-        >
-          Sign in as Admin
-        </a>
-      </li>
-      <li>
-        <a
           href="https://github.com/crrmacarse/crrmacarse.github.io"
         >
           footer.Source Code
@@ -64,7 +56,7 @@ exports[`<Footer /> matches the snapshot 1`] = `
         <a
           href="tel:+6399159039234"
         >
-          Call
+          Direct Call
         </a>
       </li>
       <li>
@@ -174,6 +166,13 @@ exports[`<Footer /> matches the snapshot 1`] = `
             href="mailto:crrmacarse@gmail.com?"
           >
             Send a direct email
+          </a>
+          <a
+            className="mr-3 block md:inline-block"
+            href="/admin/login"
+            onClick={[Function]}
+          >
+            Sign in
           </a>
           <a
             className="block md:inline-block"

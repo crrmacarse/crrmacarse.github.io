@@ -18,6 +18,6 @@ export default {
     'Get in touch': 'Get in touch',
     'Send a direct email': 'Send a direct email',
     'Powered by': 'Powered by',
-    Call: 'Call',
+    'Direct Call': 'Direct Call',
   },
 };

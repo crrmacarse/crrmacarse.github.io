@@ -33,4 +33,8 @@ export default [
     value: 'Twitter',
     component: lazy(() => import('./subroutes/twitter')),
   },
+  {
+    value: 'Project Features',
+    component: lazy(() => import('./subroutes/features')),
+  },
 ];

@@ -22,8 +22,8 @@ This is a personal project of mine. Idk what to put in here yet. So i might exte
 ### LINKS
 
 - [More Project Features here](https://github.com/crrmacarse/crrmacarse.github.io/blob/source/FEATURES.MD)
-- [Project Roadmap](https://github.com/crrmacarse/crrmacarse.github.io/blob/source/FEATURES.MD)
-- [Changelogs](https://github.com/crrmacarse/crrmacarse.github.io/blob/source/CHANGELOG.MD)
+- [Project Roadmap](https://github.com/crrmacarse/crrmacarse.github.io/blob/source/docs/FEATURES.MD)
+- [Changelogs](https://github.com/crrmacarse/crrmacarse.github.io/blob/source/docs/CHANGELOG.MD)
 
 ---
 

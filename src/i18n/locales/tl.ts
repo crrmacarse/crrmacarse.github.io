@@ -18,6 +18,6 @@ export default {
     'Get in touch': 'Makipag-ugnayan',
     'Send a direct email': 'Direktang magpadala ng email',
     'Powered by': 'Ginawa gamit ang',
-    Call: 'Tumawag',
+    'Direct Call': 'Direktang Tumawag',
   },
 };
