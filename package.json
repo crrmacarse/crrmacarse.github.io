@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "homepage": "https://crrmacarse.github.io/",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "scripts": {
     "hot": "webpack-dev-server --open --hot --profile --progress --colors --config=webpack.config.babel.js --env=hot",
@@ -30,6 +30,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
     "core-js": "^3.6.4",
+    "dotenv-webpack": "^1.7.0",
     "final-form": "^4.18.7",
     "firebase": "^7.7.0",
     "i18next": "^19.0.3",
@@ -128,5 +129,5 @@
   "keywords": [],
   "author": "@crrmacarse",
   "license": "ISC",
-  "description": "Personal Portfolio"
+  "description": "A personal website portfolio of the author to showcase his capability and knowledge with web development"
 }

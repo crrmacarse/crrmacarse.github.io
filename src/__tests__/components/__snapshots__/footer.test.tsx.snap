@@ -75,6 +75,13 @@ exports[`<Footer /> matches the snapshot 1`] = `
       </li>
       <li>
         <a
+          href="https://www.upwork.com/freelancers/~0101c083bd752f8e51"
+        >
+          Upwork
+        </a>
+      </li>
+      <li>
+        <a
           href="https://www.linkedin.com/in/christian-ryan-r-macarse-692974166/"
         >
           LinkedIn

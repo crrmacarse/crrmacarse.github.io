@@ -1,4 +1,5 @@
 import { join, resolve } from 'path';
+import DotEnv from 'dotenv-webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
@@ -98,6 +99,7 @@ export const rules = [
 ];
 
 export const plugins = [
+  new DotEnv(),
   new CleanWebpackPlugin(),
   new HtmlWebpackPlugin({
     template: join(process.cwd(), '/src/index.html'),

@@ -21,8 +21,8 @@ This is a personal project of mine. Idk what to put in here yet. So i might exte
 
 ### LINKS
 
-- [More Project Features here](https://github.com/crrmacarse/crrmacarse.github.io/blob/source/FEATURES.MD)
-- [Project Roadmap](https://github.com/crrmacarse/crrmacarse.github.io/blob/source/docs/FEATURES.MD)
+- [More Project Features here](https://github.com/crrmacarse/crrmacarse.github.io/blob/source/docs/FEATURES.MD)
+- [Project Roadmap](https://github.com/crrmacarse/crrmacarse.github.io/blob/source/docs/ROADMAP.MD)
 - [Changelogs](https://github.com/crrmacarse/crrmacarse.github.io/blob/source/docs/CHANGELOG.MD)
 
 ---
@@ -39,6 +39,12 @@ https://github.com/crrmacarse/crrmacarse.github.io.git
 # via ssh
 
 git@github.com:crrmacarse/crrmacarse.github.io.git
+```
+
+Initializing the project:
+
+```bash
+bash ./initialize.sh
 ```
 
 ---
