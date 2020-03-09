@@ -1,6 +1,7 @@
 import * as firebase from 'firebase/app';
 // import 'firebase/auth';
 import 'firebase/database';
+// import 'firebase/storage';
 
 const config = {
   apiKey: process.env.FIREBASE_API_KEY,
