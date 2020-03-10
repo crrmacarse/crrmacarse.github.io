@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[27],{576:function(e,n,t){"use strict";t.r(n);var c=t(0),a=t.n(c);n.default=function(){return a.a.createElement("div",{className:"admin-section flex items-center h-screen justify-center flex-col"},a.a.createElement("h1",null,"ADMIN PERSONAL ADD"))}}}]);
-//# sourceMappingURL=27.1da605bbc310925d4112.bundle.js.map
