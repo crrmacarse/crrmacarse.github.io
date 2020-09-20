@@ -44,4 +44,11 @@ bash ./initialize.sh
 
 ---
 
-Follow me at twitter: [🐔](https://twitter.com/pablongbuhaymo)
+#### Get in touch
+<p>
+<a href="https://www.linkedin.com/in/christian-ryan-r-macarse-692974166/">
+<img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+<a href="https://twitter.com/crrmacarse">
+<img src="https://img.shields.io/badge/crrmacarse%20-%231DA1F2.svg?&style=for-the-badge&logo=Twitter&logoColor=white"/>
+</a>
