@@ -15,7 +15,7 @@
     "test:watch": "jest --colors --watch",
     "test-update": "jest --updateSnapshot",
     "sitemap": "npx babel-node sitemap-builder.js",
-    "copy": "cp essentials/* dist -r",
+    "copy": "cp -r essentials/* dist",
     "copy:windows": "copy essentials/* dist",
     "pre-deploy": "npm run test && npm run prod && npm run sitemap && npm run copy",
     "pre-deploy:windows": "npm run test && npm run prod && npm run sitemap && npm run copy:windows",

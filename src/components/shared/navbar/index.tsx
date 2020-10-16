@@ -64,7 +64,7 @@ const Navbar = ({
   const renderNavigationMain = (
     <nav className={`${navbarClassName} flex items-center justify-between flex-wrap fixed top-0 w-full py-8 lg:px-16 px-5`}>
       <div className="flex items-center flex-grow">
-        <Link id="main" title="Hire me." className="font-semibold text-xl" to={(location) => ({ ...location, pathname: ROUTES.HOME })}>Christian Ryan R. Macarse</Link>
+        <Link id="main" title="Hire me." className="font-semibold text-lg" to={(location) => ({ ...location, pathname: ROUTES.HOME })}>Christian Ryan R. Macarse</Link>
       </div>
       <div className="flex lg:hidden">
         {renderPriorityButtons}

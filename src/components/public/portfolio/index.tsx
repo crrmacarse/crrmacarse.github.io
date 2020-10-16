@@ -17,10 +17,10 @@ const Portfolio = ({ list, isFetching, fetchList }: PortfolioProps) => {
 
   return (
     <div className="portfolio-section">
-      <ul className="flex flex flex-wrap justify-start content-center items-baseline w-11/12 mx-auto">
+      <ul className="portfolio-section__grid w-11/12 mx-auto">
         {isFetching && <p>Fetching...</p>}
         {list.map((project: any, key: number) => (
-          <li className="px-1 py-5 mx-auto" key={key}>
+          <li key={key}>
             <Card {...project} />
           </li>
         ))}
