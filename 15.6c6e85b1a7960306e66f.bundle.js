@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{567:function(e,n,t){"use strict";t.r(n);var a=t(0),c=t.n(a);n.default=function(){return c.a.createElement("div",{className:"more-section"},c.a.createElement("h1",null,"More Section"))}}}]);
+//# sourceMappingURL=15.6c6e85b1a7960306e66f.bundle.js.map
