@@ -182,6 +182,12 @@ exports[`<Footer /> matches the snapshot 1`] = `
             Sign in
           </a>
           <a
+            className="mr-3 block md:inline-block"
+            href="http://139.59.100.139/"
+          >
+            footer.Server
+          </a>
+          <a
             className="block md:inline-block"
             href="/more"
             onClick={[Function]}
