@@ -1,5 +1,9 @@
 import React from 'react';
 
-const PublicMore = () => <h1>More Section</h1>
+const PublicMore = () => (
+  <div className="more-section">
+    <h1>More Section</h1>
+  </div>
+);
 
-export default PublicMore
+export default PublicMore;
