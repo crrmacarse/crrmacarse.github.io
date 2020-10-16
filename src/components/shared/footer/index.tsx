@@ -36,6 +36,7 @@ const Footer = () => {
     <div className="text-xs font-bold">
       <a href="mailto:crrmacarse@gmail.com?" className="mr-3 block md:inline-block">{t('Send a direct email')}</a>
       <Link className="mr-3 block md:inline-block" to={(location) => ({ ...location, pathname: ROUTES.ADMIN_LOGIN })}>Sign in</Link>
+      <a className="mr-3 block md:inline-block" href="http://139.59.100.139/">{t('footer.Server')}</a>
       <Link to={ROUTES.MORE} className="block md:inline-block">{t('More')}</Link>
     </div>
   );
