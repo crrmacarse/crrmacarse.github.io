@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[30],{567:function(e,n,t){"use strict";t.r(n);var c=t(0),a=t.n(c);n.default=function(){return a.a.createElement("div",{className:"admin-section flex items-center h-screen justify-center flex-col"},a.a.createElement("h1",null,"ADMIN PROJECTS EDIT"))}}}]);
-//# sourceMappingURL=30.cce99f1b5ccef27b3869.bundle.js.map
