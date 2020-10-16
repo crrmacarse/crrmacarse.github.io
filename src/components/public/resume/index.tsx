@@ -5,12 +5,15 @@ import { useTranslation } from 'react-i18next';
 const GOOGLE_DOCS_LINK = 'https://docs.google.com/document/d/1HOZNeObFb-aLNcEhRIkXHkv1iaP5CtYcpIgsaLcqP3o';
 const DOWNLOADABLE_LINK = `${GOOGLE_DOCS_LINK}/export?format=pdf`.trim();
 
+/**
+ * @TODO: Link passing on PDF file doesn't seem to work
+ */
 const Resume = () => {
   const { t } = useTranslation();
 
   return (
     <div className="resume-section flex flex-col items-center lg:justify-center justify-around">
-      <Document file={DOWNLOADABLE_LINK}>
+      <Document file="/assets/resume.pdf">
         <Page width={900} pageNumber={1} />
       </Document>
       <p className="lg:hidden">Sorry, PDF Viewer doesn&apos;t work in mobile.</p>
