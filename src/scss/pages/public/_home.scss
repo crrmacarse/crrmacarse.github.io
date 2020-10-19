@@ -1,6 +1,10 @@
 .home-section {
   height: 100vh;
 
+  * {
+    cursor: default;
+  }
+
   @include themed() {
     color: t($text);
     background: t($bg);
