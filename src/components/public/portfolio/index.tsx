@@ -20,7 +20,7 @@ const Portfolio = ({ list, isFetching, fetchList }: PortfolioProps) => {
       <ul className="portfolio-section__grid w-11/12 mx-auto">
         {isFetching && <p>Fetching...</p>}
         {list.map((project: any, key: number) => (
-          <li key={key}>
+          <li key={key} className="lg:mx-auto">
             <Card {...project} />
           </li>
         ))}

@@ -16,10 +16,10 @@ const Resume = () => {
       <Document file="/assets/resume.pdf">
         <Page width={900} pageNumber={1} />
       </Document>
-      <p className="lg:hidden">Sorry, PDF Viewer doesn&apos;t work in mobile.</p>
-      <div className="footer font-bold text-lg">
+      <p className="lg:hidden text-center">Sorry, PDF Viewer doesn&apos;t work in mobile.</p>
+      <div className="footer font-bold text-lg text-center">
         <a href={GOOGLE_DOCS_LINK} className="md:mx-8 mx-3">{t('View Google Docs Version')}</a>
-        <a href={DOWNLOADABLE_LINK} className="lg:mx-8 mx-3">{t('Download')}</a>
+        <a href={DOWNLOADABLE_LINK} className="block md:inline lg:mx-8 mx-3">{t('Download')}</a>
       </div>
     </div>
   );
