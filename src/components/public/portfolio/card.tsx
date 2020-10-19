@@ -5,17 +5,17 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import NoImage from 'assets/images/no-image.jpg';
 
 export interface CardProps {
-    title: string,
-    image: {
-        src: string,
-        alt?: string,
-    },
-    description: string,
-    tags?: string[],
-    links?: {
-        github?: string,
-        website?: string,
-    }
+  title: string,
+  image: {
+    src: string,
+    alt?: string,
+  },
+  description: string,
+  tags?: string[],
+  links?: {
+    github?: string,
+    website?: string,
+  }
 }
 
 const Card = ({
@@ -38,12 +38,12 @@ const Card = ({
         ))}
       </ul>
       {links
-                && (
-                <div>
-                  {links.website && <a href={links.website} className="mr-2" title="Check the website" target="_blank" rel="noopener noreferrer" aria-label="link"><FontAwesomeIcon icon="external-link-alt" /></a>}
-                  {links.github && <a href={links.github} className="mr-2" title="Check the source code" target="_blank" rel="noopener noreferrer" aria-label="link"><FontAwesomeIcon icon={faGithub} /></a>}
-                </div>
-                )}
+        && (
+          <div className="flex">
+            {links.website && <a href={links.website} className="mr-2" title="Check the website" target="_blank" rel="noopener noreferrer" aria-label="link"><FontAwesomeIcon icon="external-link-alt" /></a>}
+            {links.github && <a href={links.github} className="mr-2" title="Check the source code" target="_blank" rel="noopener noreferrer" aria-label="link"><FontAwesomeIcon icon={faGithub} /></a>}
+          </div>
+        )}
     </div>
   </div>
 );

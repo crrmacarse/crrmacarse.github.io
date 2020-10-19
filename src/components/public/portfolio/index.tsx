@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getProjects } from 'actions/projects';
+import orderBy from 'lodash/orderBy';
 import Card from './card';
 
 interface PortfolioProps {
@@ -19,7 +20,7 @@ const Portfolio = ({ list, isFetching, fetchList }: PortfolioProps) => {
     <div className="portfolio-section">
       <ul className="portfolio-section__grid w-11/12 mx-auto">
         {isFetching && <p>Fetching...</p>}
-        {list.map((project: any, key: number) => (
+        {orderBy(list, 'priority').map((project: any, key: number) => (
           <li key={key} className="lg:mx-auto">
             <Card {...project} />
           </li>
