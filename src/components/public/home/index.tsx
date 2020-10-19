@@ -20,6 +20,8 @@ const Home = () => {
       className="home-section flex flex-col items-center justify-center"
       onMouseDown={() => setPressed(true)}
       onMouseUp={() => setPressed(false)}
+      onTouchStart={() => setPressed(true)}
+      onTouchEnd={() => setPressed(false)}
     >
       <svg style={{ position: 'absolute', width: 0, height: 0 }}>
         <filter id="goo">
