@@ -54,13 +54,6 @@ exports[`<Footer /> matches the snapshot 1`] = `
       </h4>
       <li>
         <a
-          href="tel:+6399159039234"
-        >
-          Direct Call
-        </a>
-      </li>
-      <li>
-        <a
           href="https://github.com/crrmacarse"
         >
           Github
