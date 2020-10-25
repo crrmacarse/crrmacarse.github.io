@@ -7,7 +7,7 @@ const Contact = ({ translate }: { translate: any }) => (
     <li><a href="https://stackoverflow.com/users/10030210/crrmacarse">Stack Overflow</a></li>
     <li><a href="https://www.upwork.com/freelancers/~0101c083bd752f8e51">Upwork</a></li>
     <li><a href="https://www.linkedin.com/in/christian-ryan-r-macarse-692974166/">LinkedIn</a></li>
-    <li><a href="https://twitter.com/pablongbuhaymo">Twitter</a></li>
+    <li><a href="https://twitter.com/crrmacarse">Twitter</a></li>
   </ul>
 );
 
