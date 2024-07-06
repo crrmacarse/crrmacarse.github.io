@@ -46,3 +46,41 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: master
         FOLDER: dist
+
+# NEW VERSION
+# name: Release
+
+# on:
+#   release:
+#     types:
+#       - released
+
+# env:
+#   PUBLIC_URL: http://crrmacarse.github.io
+#   GA_TRACKING_CODE: ${{ secrets.GA_TRACKING_CODE }}
+# jobs:
+#   publish:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@v2.0.0
+
+#     - name: Use node 18
+#       uses: actions/setup-node@v1
+#       with:
+#           node-version: 18
+#           registry-url: https://registry.npmjs.org
+
+#     - name: install
+#       run: npm install
+#     - name: build
+#       run: npm run build
+#     - name: copy
+# TODO: Update dist to build
+#       run: npm run copy
+
+#     - name: Build and Deploy
+#       uses: JamesIves/github-pages-deploy-action@releases/v3
+#       with:
+#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         BRANCH: master
+#         FOLDER: build
