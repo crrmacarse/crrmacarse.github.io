@@ -38,6 +38,16 @@ Initializing the project:
 bash ./initialize.sh
 ```
 
+### V2
+
+```bash
+// Run Development
+npm run start:dev
+
+// Run Production
+npm run build
+```
+
 ---
 
 ### Wanna help me build this thing? Hit me up or just send me a PR and we'll review it!
