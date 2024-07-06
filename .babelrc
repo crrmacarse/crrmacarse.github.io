@@ -10,6 +10,6 @@
                 "corejs": "core-js@2"
             }
         ],
-        "@babel/preset-react",
+        ["@babel/preset-react", {"runtime": "automatic"}],
     ]
 }
