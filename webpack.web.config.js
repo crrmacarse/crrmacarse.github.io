@@ -3,12 +3,15 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: path.join(__dirname, 'src/app.tsx'),
+  entry: path.join(__dirname, 'v2/app.tsx'),
   output: {
     path: path.join(__dirname, 'build'),
     filename: 'bundle.js',
   },
   resolve: {
+    alias: {
+      "@v2": path.resolve(__dirname, "v2/"),
+    },
     extensions: ['.js', '.ts', '.jsx', '.tsx', '.css', '.json'],
   },
   module: {
@@ -22,7 +25,7 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        include: path.resolve(__dirname, 'src'),
+        include: path.resolve(__dirname, 'v2'),
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
@@ -48,7 +51,7 @@ module.exports = {
 
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new HtmlWebpackPlugin({ template: './v2/index.html' }),
   ],
   devServer: {
     hot: true,

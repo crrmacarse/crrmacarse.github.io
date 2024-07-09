@@ -2,6 +2,10 @@
 const { colors: { orange } } = require('tailwindcss/defaultTheme');
 
 module.exports = {
+  content: [
+    './src/**/*.{ts,tsx,html}', // <== Update this
+    './v2/**/*.{ts,tsx,html}', // <== Update this
+  ],
   theme: {
     colors: {
       orange,
