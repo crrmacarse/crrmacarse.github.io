@@ -5,10 +5,10 @@ import about from 'components/public/about/locales/tl.json';
 
 export default {
   translation: {
-    // navbar,
-    // footer,
-    // home,
-    // about,
+    "Portfolio": "Portpolyo",
+    "Resume": "Buod",
+    "About": "Tungkol sa Sarili",
+    "Personal": "Pansarili",
     Download: 'Kopyahin',
     'Click here': 'Pumunta dito.',
     notice: 'Maaring bumisita nalang muna sa nakaraang beryson',

@@ -39,10 +39,7 @@ const Navbar = ({
 
   const renderNavbarList = (
     <Fragment>
-      <Link {...navbarRepetetiveProps} to={(location) => ({ ...location, pathname: ROUTES.PORTFOLIO })}>{t('navbar.Portfolio')}</Link>
-      <Link {...navbarRepetetiveProps} to={(location) => ({ ...location, pathname: ROUTES.RESUME })}>{t('navbar.Resume')}</Link>
-      <Link {...navbarRepetetiveProps} to={(location) => ({ ...location, pathname: ROUTES.ABOUT })}>{t('navbar.About')}</Link>
-      <Link {...navbarRepetetiveProps} to={(location) => ({ ...location, pathname: ROUTES.PERSONAL })}>{t('navbar.Personal')}</Link>
+      <Link {...navbarRepetetiveProps} to={(location) => ({ ...location, pathname: ROUTES.PORTFOLIO })}>{t('Portfolio')}</Link>
     </Fragment>
   );
 
