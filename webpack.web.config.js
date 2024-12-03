@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: path.join(__dirname, 'v2/app.tsx'),
@@ -53,10 +54,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({ template: './v2/index.html' }),
+    new Dotenv(),
   ],
   devServer: {
     hot: true,
     port: 3000,
     open: true,
+    historyApiFallback: true,
   },
 };
