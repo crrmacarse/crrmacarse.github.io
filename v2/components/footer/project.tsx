@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Project = ({ translate }: { translate: any }) => (
   <ul className="lg:w-1/6 w-1/2 p-3">
     <h4 className="font-bold mb-2">{translate('footer.About this Project')}</h4>

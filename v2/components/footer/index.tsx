@@ -1,9 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
-import * as ROUTES from '@v2/constants/routes';
 import Project from './project';
 import Contact from './contact';
 
@@ -14,19 +12,30 @@ const Footer = () => {
     <div className="my-3">
       <div className="flex md:items-center justify-between flex-col md:flex-row">
         <p className="text-sm">
-          {`${t('footer.Written with love')}.`}
+          {t('footer.Note')}
         </p>
-        <ul className="text-lg md:flex block md:items-center">
+        <ul className="text-lg md:flex block md:items-center space-x-2">
           <small className="text-xs mr-2">{`${t('Powered by')}:`}</small>
-          <div className="flex items-center md:my-0 mb-1 mr-2">
+          <div className="flex items-center md:my-0 mb-1">
             <FontAwesomeIcon icon={faReact} />
             <span title="React" className="font-bold text-sm ml-1 ">React</span>
           </div>
+          <li>
           <img
+            width={23}
+            title="Webpack"
+            src="/assets/svgs/webpack.svg"
+            alt="Webpack"
+          />
+          </li>
+          <li>
+          <img
+            width={20}
             title="Typescript"
-            src="https://camo.githubusercontent.com/575bd49b0da0bd09b6a4f346a134e8c42ce9c58c/68747470733a2f2f616c65656e34322e6769746875622e696f2f6261646765732f7372632f747970657363726970742e737667"
+            src="/assets/svgs/typescript.svg"
             alt="typescript"
           />
+          </li>
         </ul>
       </div>
     </div>
@@ -35,9 +44,6 @@ const Footer = () => {
   const renderActions = (
     <div className="text-xs font-bold">
       <a href="mailto:crrmacarse@gmail.com?" className="mr-3 block md:inline-block">{t('Send a direct email')}</a>
-      <Link className="mr-3 block md:inline-block" to={(location) => ({ ...location, pathname: ROUTES.ABOUT })}>Sign in</Link>
-      <a className="mr-3 block md:inline-block" href="http://139.59.100.139/">{t('footer.Server')}</a>
-      <Link to={ROUTES.PORTFOLIO} className="block md:inline-block">{t('More')}</Link>
     </div>
   );
 

@@ -1,12 +1,12 @@
 import home from 'components/public/home/locales/en.json';
 import navbar from 'components/shared/navbar/locales/en.json';
-import footer from 'components/shared/footer/locales/en.json';
+import footer from '@v2/components/shared/footer/locales/en.json';
 import about from 'components/public/about/locales/en.json';
 
 export default {
   translation: {
     // navbar,
-    // footer,
+    footer,
     // home,
     // about,
     "Portfolio": "Portfolio",

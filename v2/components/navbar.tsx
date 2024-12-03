@@ -1,11 +1,11 @@
-import React, { useState, Fragment } from 'react';
+import { useState, Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink as Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun } from '@fortawesome/free-solid-svg-icons';
 import { faMoon } from '@fortawesome/free-regular-svg-icons';
 import * as ROUTES from '@v2/constants/routes';
-import ChangeLanguage from '../components/shared/navbar/change-language-toggle';
+import ChangeLanguage from './change-language-toggle';
 import Blinker from '@v2/components/blinker';
 import IsOffline from '@v2/components/is-offline';
 
@@ -39,7 +39,8 @@ const Navbar = ({
 
   const renderNavbarList = (
     <Fragment>
-      <Link {...navbarRepetetiveProps} to={(location) => ({ ...location, pathname: ROUTES.PORTFOLIO })}>{t('Portfolio')}</Link>
+      <Link {...navbarRepetetiveProps} to={ROUTES.PORTFOLIO}>{t('Portfolio')}</Link>
+      <Link {...navbarRepetetiveProps} to={ROUTES.RESUME}>{t('Resume')}</Link>
     </Fragment>
   );
 
@@ -60,7 +61,7 @@ const Navbar = ({
   const renderNavigationMain = (
     <nav className={`${navbarClassName} flex items-center justify-between flex-wrap fixed top-0 w-full py-8 lg:px-16 px-5`}>
       <div className="flex items-center flex-grow">
-        <Link id="main" title="Hire me." className="font-semibold text-lg" to={(location) => ({ ...location, pathname: ROUTES.HOME })}>Christian Ryan R. Macarse</Link>
+        <Link id="main" title="Hire me." className="font-semibold text-lg" to={ROUTES.HOME}>Christian Ryan R. Macarse</Link>
       </div>
       <div className="flex lg:hidden">
         {renderPriorityButtons}
