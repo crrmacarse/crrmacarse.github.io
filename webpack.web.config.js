@@ -31,6 +31,21 @@ module.exports = {
         // exclude: /node_modules/,
         use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
+      // Loader fo CSS Module
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     "style-loader",
+      //     {
+      //       loader: "css-loader",
+      //       options: {
+      //         importLoaders: 1,
+      //         modules: true,
+      //       },
+      //     },
+      //   ],
+      //   include: /\.module\.css$/,
+      // },
       {
         test: /\.(eot|otf|ttf|woff|woff2)$/,
         loader: require.resolve('file-loader'),
@@ -51,6 +66,7 @@ module.exports = {
         },
         type: 'javascript/auto'
       },
+      // SCSS loader
       {
         test: /\.s[ac]ss$/i,
         use: [

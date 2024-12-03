@@ -4,9 +4,12 @@ const cssnano = require('cssnano');
 
 const purgecss = require('@fullhuman/postcss-purgecss')({
   content: [
-    './src/**/*.ts',
-    './src/**/*.tsx',
-    './src/**/*.js',
+    './v2/**/*.ts',
+    './v2/**/*.tsx',
+    './v2/**/*.js',
+    // './src/**/*.ts',
+    // './src/**/*.tsx',
+    // './src/**/*.js',
   ],
 
   defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
