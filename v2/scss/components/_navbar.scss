@@ -1,0 +1,17 @@
+.navbar-section {
+    z-index: 50;
+
+    @include themed() {
+      color: t($text);
+      background: t($bg);
+    }
+}
+
+.navbar-section-inverted {
+  z-index: 50;
+
+  @include themed() {
+    color: t($text-secondary);
+    background: t($bg-secondary);
+  }
+}

@@ -1,0 +1,50 @@
+.personal-section {
+  padding: 7.5rem 1rem;
+  min-height: 100vh;
+
+  @media (min-width: $tailwind-breakpoint-lg) {
+    padding: 7.5rem 6rem;
+   }
+
+  @include themed() {
+    color: t($text);
+    background: t($bg);
+  }
+
+  .navigation {
+    margin-right: 1rem;
+
+    .navigation-links {
+      width: 15rem;
+      padding: 1.5rem 1.5rem 3rem 1.5rem;
+
+      @include themed() {
+        color: t($bg);
+        background: t($bg-tertiary)
+      }
+    }
+  }
+
+  .title {
+
+    a {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-right: 0.8rem;
+    }
+  }
+
+  .component {
+    margin-top: 3rem;
+
+    @media (min-width: $tailwind-breakpoint-lg) {
+      margin-top: 0;
+     }
+
+     .content {
+      margin-top: 5rem;
+    }
+  }
+
+
+}

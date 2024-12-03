@@ -1,0 +1,11 @@
+.error-boundary-section {
+    @include themed() {
+        color: t($text);
+        background: t($bg);
+    }
+
+    .exclamation-warning {
+        color: #dc3545;
+        font-size: 8rem;
+    }
+}

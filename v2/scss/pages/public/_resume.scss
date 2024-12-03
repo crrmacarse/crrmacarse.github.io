@@ -1,0 +1,23 @@
+.resume-section {
+    min-height: 100vh;
+    padding: 10em 0px;
+     
+    @include themed() {
+      color: t($text);
+      background: t($bg);
+    }
+}
+
+.react-pdf__Page {
+  position: inherit !important;
+}
+
+.react-pdf__Page__canvas {
+  margin: auto;
+}
+
+.react-pdf__Document {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}

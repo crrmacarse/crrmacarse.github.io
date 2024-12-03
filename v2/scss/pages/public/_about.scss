@@ -1,0 +1,9 @@
+.about-section {
+    padding: 5rem 0px;
+    min-height: 100vh;
+
+    @include themed() {
+      color: t($text);
+      background: t($bg);
+    }
+  }

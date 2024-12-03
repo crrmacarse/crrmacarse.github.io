@@ -1,0 +1,13 @@
+.base-loader {
+    font-size: 5rem;
+
+    @include themed() {
+        color: t($text);
+        background: t($bg);
+    }
+
+    .overlay {
+        background-color: $bg-gray-loader;
+        opacity: 40%;
+    }
+}

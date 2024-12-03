@@ -1,0 +1,34 @@
+@use "base/variables";
+@use "base/theme";
+
+html {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+html, body {
+  font-family: $font-family;
+  margin: 0;
+  height: 100%;
+  background: $bg--dark;
+
+  p {
+    white-space: pre-line;
+
+    @include themed() {
+      color: t($text);
+    }
+  }
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  div {
+    &:focus {
+      outline: none;
+    }
+  }
+}
