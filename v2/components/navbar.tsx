@@ -59,7 +59,7 @@ const Navbar = ({
   const navbarClassName = open ? 'navbar-section-inverted' : 'navbar-section';
 
   const renderNavigationMain = (
-    <nav className={`${navbarClassName} flex items-center justify-between flex-wrap fixed top-0 w-full py-8 lg:px-16 px-5`}>
+    <nav className={`${navbarClassName} flex items-center justify-between flex-wrap fixed top-0 w-full py-8 lg:px-16 px-5 bg-white dark:bg-[#252c31]`}>
       <div className="flex items-center flex-grow">
         <Link id="main" title="Hire me." className="font-semibold text-lg" to={ROUTES.HOME}>Christian Ryan R. Macarse</Link>
       </div>

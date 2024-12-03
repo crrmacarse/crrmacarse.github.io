@@ -9,12 +9,6 @@ module.exports = {
   ],
   darkMode: 'selector',
   theme: {
-    colors: {
-      ...colors,
-      primary: {
-        DEFAULT: '',
-      }
-    },
     extend: {
       height: {
         128: '32rem',
@@ -60,6 +54,7 @@ module.exports = {
     'gridTemplateColumns',
     'gap',
     'minHeight',
-    'space'
+    'space',
+    'backgroundColor'
   ],
 };

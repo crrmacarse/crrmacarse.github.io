@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import Rocket from './rocket';
 import Carousel from './carousel';
+import { useTranslation } from 'react-i18next';
 
 const HomePage = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
 
   const workExperienceYear = new Date().getFullYear() - 2017
   const marshallAge = new Date().getFullYear() - 2020
@@ -18,19 +20,19 @@ const HomePage = () => {
         <p>
           "bike stroll; chasing summits; feeding my loml; and making sure my dog is living his best life."</p>
       </blockquote>
-      <p className='text-[#202124] max-w-3xl mb-3'>
+      <p className='max-w-3xl mb-3'>
         Is a personally curated purpose of my own life. As an individual who values his mental health. I always make
         sure to have a spare time to indulge the beauties of life. Occasional biking and running had been integrated to my life.
         With fear of back pains, Iblabla and Strava link. My longest bike so far is a 700km+ ride around Panay Island.
       </p>
-      <p className='text-[#202124] max-w-3xl mb-3'>
+      <p className='max-w-3xl mb-3'>
         Hiking is probably one of my blabla. With over 32(Completed Top 5 highest mountains in PH, Mt. Guiting Guiting, Mt. Kota Kinabalu) summited mountains.
         It had been my go to hobby to chase mountains around the Philippines and abroad. Eve
       </p>
-      <p className='text-[#202124] max-w-3xl mb-3'>
+      <p className='max-w-3xl mb-3'>
         Cooking is one of my way of showing my appreciation. A self-proclaimed-chef. Talk Glamping and Bike packing
       </p>
-      <p className='text-[#202124] max-w-3xl mb-8'>
+      <p className='max-w-3xl mb-8'>
         Lastly, my {marshallAge} year old beagle, Marshall, who had been with me on my hikes. A lovely fellow that doesn't even know how to bark and
         filled with anxiety around other dogs. But humans? He loves them!
       </p>
@@ -40,17 +42,18 @@ const HomePage = () => {
   )
 
   return (
-    <div className='flex flex-col-reverse sm:flex-row sm:justify-around sm:items-center min-h-screen my-20'>
+    <div className='flex flex-col-reverse sm:flex-row sm:justify-around sm:items-center min-h-screen pt-24'>
       <div>
-        <h1 className='text-3xl text-[#707175] mb-1 font-bold'>
-          Analytical. Accountable. A Team Person.
+        <h1 className='text-3xl mb-1 font-bold'>
+          {/* Analytical. Accountable. A Team Person. */}
+          {t('Intro')}
         </h1>
-        <p className='text-[#202124] max-w-3xl mb-3'>
+        <p className='max-w-3xl mb-3'>
           Hey there! My name is <i>Christian Ryan Refuerzo Macarse</i>. A BS Computer Science graduate from Central Philippine University
           and a proud resident of Iloilo, Philippines. With a total of <b>{workExperienceYear}</b> years work experience in the field
           of Software Engineering. I am capable of multiple things such as Full Stack Development, DevOps, Documentation, QA, and Leadership.
         </p>
-        <p className='text-[#202124] max-w-3xl mb-3'>
+        <p className='max-w-3xl mb-3'>
           My excellent interpersonal communication skills, time management, detail-oriented, and wide array of technical knowledge would be a
           great fit to your company!
         </p>
