@@ -44,7 +44,7 @@ jobs:
       with:
         # ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: v2
+        BRANCH: output
         FOLDER: build
 
 # NEW VERSION
