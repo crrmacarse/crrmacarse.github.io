@@ -6,6 +6,7 @@ import '@v2/firebase';
 // TODO: Not working
 // import '@v2/scss/index.scss'
 import '@v2/i18n';
+import '@v2/fontawesome';
 import useDarkMode from "@v2/hooks/useDarkMode";
 import Navbar from '@v2/components/navbar';
 import Footer from '@v2/components/footer';
