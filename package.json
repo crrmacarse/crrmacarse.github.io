@@ -21,7 +21,7 @@
     "copy:windows": "copy essentials/* dist",
     "pre-deploy": "npm run test && npm run prod && npm run sitemap && npm run copy",
     "pre-deploy:windows": "npm run test && npm run prod && npm run sitemap && npm run copy:windows",
-    "serve:prod": "serve dist",
+    "serve:prod": "serve build",
     "deploy": "npm run pre-deploy && gh-pages -b master -d dist",
     "deploy:windows": "npm run pre-deploy:windows && gh-pages -b master -d dist"
   },
