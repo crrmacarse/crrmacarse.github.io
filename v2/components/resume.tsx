@@ -11,7 +11,7 @@ const ResumePage = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="resume-section flex flex-col items-center lg:justify-center justify-around min-h-screen mt-20">
+    <div className="resume-section flex flex-col items-center lg:justify-center justify-around min-h-screen py-20">
       {/* <Document file={DOWNLOADABLE_LINK}>
         <Page width={900} pageNumber={1} renderAnnotationLayer={false} renderTextLayer={false} />
       </Document> */}

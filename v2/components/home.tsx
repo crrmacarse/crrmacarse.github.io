@@ -23,7 +23,7 @@ const HomePage = () => {
       <p className='max-w-3xl mb-3'>
         Is a personally curated purpose of my own life. As an individual who values his mental health. I always make
         sure to have a spare time to indulge the beauties of life. Occasional biking and running had been integrated to my life.
-        With fear of back pains, Iblabla and Strava link. My longest bike so far is a 700km+ ride around Panay Island.
+        With fear of back pains, Iblabla and <a href="https://www.strava.com" className='font-semibold'>Strava</a>. My longest bike so far is a 700km+ ride around Panay Island.
       </p>
       <p className='max-w-3xl mb-3'>
         Hiking is probably one of my blabla. With over 32(Completed Top 5 highest mountains in PH, Mt. Guiting Guiting, Mt. Kota Kinabalu) summited mountains.
@@ -42,7 +42,7 @@ const HomePage = () => {
   )
 
   return (
-    <div className='flex flex-col-reverse sm:flex-row sm:justify-around sm:items-center min-h-screen pt-24'>
+    <div className='flex flex-col-reverse sm:flex-row sm:justify-around sm:items-center min-h-screen pt-24 pb-20'>
       <div>
         <h1 className='text-3xl mb-1 font-bold'>
           {/* Analytical. Accountable. A Team Person. */}
