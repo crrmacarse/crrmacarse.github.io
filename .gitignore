@@ -1,8 +1,0 @@
-node_modules/
-dist/
-coverage/
-build/
-
-**/.DS_Store
-.env
-compilation-stats.json

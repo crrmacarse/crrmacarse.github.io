@@ -1,8 +1,0 @@
-.is-offline {
-  z-index: 60;
-
-  @include themed() {
-    color: t($text-secondary);
-    background: t($bg-secondary);
-  }
-}

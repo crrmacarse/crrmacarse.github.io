@@ -1,8 +1,0 @@
-.admin-login-section {
-  min-height: 100vh;
-
-  @include themed() {
-    color: t($text);
-    background: t($bg);
-  }
-}
