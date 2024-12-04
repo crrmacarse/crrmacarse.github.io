@@ -55,6 +55,7 @@ module.exports = {
     'gap',
     'minHeight',
     'space',
-    'backgroundColor'
+    'backgroundColor',
+    'visibility'
   ],
 };
