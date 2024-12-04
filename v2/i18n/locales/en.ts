@@ -1,6 +1,6 @@
 import home from 'components/public/home/locales/en.json';
 import navbar from 'components/shared/navbar/locales/en.json';
-import footer from '@v2/components/shared/footer/locales/en.json';
+import footer from '@v2/components/footer/locales/en.json';
 import about from 'components/public/about/locales/en.json';
 
 export default {
@@ -18,6 +18,7 @@ export default {
     notice: 'For the meantime, you could visit the old website',
     here: 'here.',
     More: 'More',
+    'Intro': 'Analytical. Accountable. A Team Person.',
     'View Google Docs Version': 'View Google Docs Version',
     'Get in touch': 'Get in touch',
     'Send a direct email': 'Send a direct email',

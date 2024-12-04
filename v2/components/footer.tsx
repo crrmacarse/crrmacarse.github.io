@@ -1,8 +1,7 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
-import Project from './project';
+import Project from './about-project';
 import Contact from './contact';
 
 const Footer = () => {
@@ -12,10 +11,12 @@ const Footer = () => {
     <div className="my-3">
       <div className="flex md:items-center justify-between flex-col md:flex-row">
         <p className="text-sm">
-          {t('footer.Note')}
+          {t('footer.note')}
+          <small className='text-xs mx-1'>(v2.1.0)</small>
+          🫶
         </p>
         <ul className="text-lg md:flex block md:items-center space-x-2">
-          <small className="text-xs mr-2">{`${t('Powered by')}:`}</small>
+          <small className="text-xs">{`${t('Powered by')}:`}</small>
           <div className="flex items-center md:my-0 mb-1">
             <FontAwesomeIcon icon={faReact} />
             <span title="React" className="font-bold text-sm ml-1 ">React</span>
@@ -48,7 +49,7 @@ const Footer = () => {
   );
 
   return (
-    <div className="footer-section">
+    <div className="footer-section bg-[#f3f3f3] dark:bg-[#2c353c]">
       <div className="flex items-start justify-around lg:w-3/4 mx-auto py-10 flex-wrap lg:flex-no-wrap">
         <Project translate={t} />
         <Contact translate={t} />
