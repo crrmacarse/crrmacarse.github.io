@@ -10,12 +10,13 @@ const Footer = () => {
   const renderHighlight = (
     <div className="my-3">
       <div className="flex md:items-center justify-between flex-col md:flex-row">
-        <p className="text-sm">
+        <p className="text-sm mb-1 sm:mb-0">
           {t('footer.note')}
-          <small className='text-xs mx-1'>(v2.11.2)</small>
+          {/* TODO: Look for ways on displaying version from package.json. Do not import directly */}
+          <small className='text-xs mx-1'>(v2.12.1)</small>
           🫶
         </p>
-        <ul className="text-lg md:flex block md:items-center space-x-2">
+        <ul className="text-lg flex items-center space-x-2">
           <small className="text-xs">{`${t('Powered by')}:`}</small>
           <div className="flex items-center md:my-0 mb-1">
             <FontAwesomeIcon icon={faReact} />
