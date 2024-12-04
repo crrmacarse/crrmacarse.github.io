@@ -21,7 +21,7 @@ const App = () => {
   const { theme, isFirstTime, toggleTheme } = useDarkMode();
 
   return (
-    <div className={`${theme} bg-white dark:bg-[#252c31] text-[#707175 dark:text-[#cac3bc]`}>
+    <div className={`${theme} bg-[#f3f3f3] dark:bg-[#252c31] text-[#707175 dark:text-[#cac3bc]`}>
       <BrowserRouter>
       <Navbar isFirstTime={isFirstTime} theme={theme} toggleTheme={toggleTheme} visited={true} />
         <Routes>

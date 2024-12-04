@@ -59,7 +59,7 @@ const Navbar = ({
   // const navbarClassName = open && '';
 
   const renderNavigationMain = (
-    <nav className={`${open ? 'bg-[#f3f3f3] dark:bg-[#2c353c]' : ''} flex items-center justify-between flex-wrap fixed top-0 w-full py-8 lg:px-16 px-5 bg-white dark:bg-[#252c31] z-50`}>
+    <nav className={`${open ? 'bg-[#ececec] dark:bg-[#2c353c]' : ''} flex items-center justify-between flex-wrap fixed top-0 w-full py-8 lg:px-16 px-5 bg-[#f3f3f3] dark:bg-[#252c31] z-50`}>
       <div className="flex items-center flex-grow">
         <Link id="main" title="Hire me." className="font-semibold text-lg" to={ROUTES.HOME}>
           <span className='hidden sm:block'>Christian Ryan R. Macarse</span>

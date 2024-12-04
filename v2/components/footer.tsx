@@ -50,7 +50,7 @@ const Footer = () => {
   );
 
   return (
-    <div className="footer-section bg-[#f3f3f3] dark:bg-[#2c353c]">
+    <div className="footer-section bg-[#ececec] dark:bg-[#2c353c]">
       <div className="flex items-start justify-around lg:w-3/4 mx-auto py-10 flex-wrap lg:flex-no-wrap">
         <Project translate={t} />
         <Contact translate={t} />
