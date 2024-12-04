@@ -23,29 +23,29 @@ jobs:
     steps:
     - uses: actions/checkout@v2.0.0
 
-    - name: Use node 12
+    - name: Use node 18
       uses: actions/setup-node@v1
       with:
-          node-version: 12
+          node-version: 18
           registry-url: https://registry.npmjs.org
 
     - name: install
       run: npm install
     - name: build
-      run: npm run prod
+      run: npm run build
     # https://babeljs.io/docs/en/next/babel-node.html#not-meant-for-production-use
     # - name: build sitemap
     #   run: npm run sitemap
-    - name: copy
-      run: npm run copy
+    # - name: copy
+    #   run: npm run copy
 
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         # ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: master
-        FOLDER: dist
+        BRANCH: v2
+        FOLDER: build
 
 # NEW VERSION
 # name: Release
