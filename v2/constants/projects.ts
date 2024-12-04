@@ -95,4 +95,13 @@ export const PROJECTS_DATA = [
     title: "SimpleWaste Vendor Signup Website",
     priority: 10,
   },
+  {
+    description: "A rework",
+    image:
+      { alt: '', src: '/assets/images/projects/portfolio-v2.png' },
+    links: { website: 'https://careers.xtendops.com/' },
+    tags: ['nextjs', 'react', 'tailwindcss'],
+    title: "This Portfolio Website v2",
+    priority: 10,
+  },
 ]
