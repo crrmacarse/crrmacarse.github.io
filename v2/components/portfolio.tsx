@@ -44,9 +44,9 @@ const PortfolioPage = () => {
   }, [])
 
   return (
-    <div className="portfolio-section min-h-screen pt-28">
+    <div className="portfolio-section min-h-screen pt-28 px-3">
       <Tags tags={tags} onSelect={(t) => handleTagClick(t)} onReset={handleTagReset}/>
-      <ul className="w-11/12 mx-auto grid-cols-3 grid gap-5">
+      <ul className="sm:w-11/12 mx-auto sm:grid-cols-3 grid gap-5">
         {orderBy(filteredProjects, 'priority').map((project: any, key: number) => (
           <li key={key} className="lg:mx-auto">
             <Card {...project} />
