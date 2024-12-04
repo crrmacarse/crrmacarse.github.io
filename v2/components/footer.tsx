@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="flex md:items-center justify-between flex-col md:flex-row">
         <p className="text-sm">
           {t('footer.note')}
-          <small className='text-xs mx-1'>(v2.1.0)</small>
+          <small className='text-xs mx-1'>(v2.11.2)</small>
           🫶
         </p>
         <ul className="text-lg md:flex block md:items-center space-x-2">

@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "homepage": "https://crrmacarse.github.io/",
-  "version": "1.2.0",
+  "version": "2.11.2",
   "private": true,
   "scripts": {
     "start:dev": "webpack serve --config=webpack.web.config.js --mode development",
