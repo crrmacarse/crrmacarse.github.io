@@ -1,6 +1,6 @@
 # Website Portfolio
 
-![CI](https://github.com/crrmacarse/crrmacarse.github.io/workflows/CI/badge.svg?branch=source) ![Release](https://github.com/crrmacarse/crrmacarse.github.io/workflows/Release/badge.svg?branch=source)
+![CI](https://github.com/crrmacarse/crrmacarse.github.io/workflows/CI/badge.svg) ![Release](https://github.com/crrmacarse/crrmacarse.github.io/workflows/Release/badge.svg)
 
 This 5+ year old project was initiated to showcase my capability and knowledge with web development(especially Javascript libraries). A carefully
 written typescript application from scratch. This is linted, test-driven, and strictly structured with scalability and optimization in mind.
