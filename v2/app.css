@@ -20,6 +20,24 @@
 width: 30vw;
 }
 
+.blinker-container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@keyframes blinker {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+ }
+
+.blink {
+  animation: blinker 2s linear infinite;
+}
+
+
 .swiper {
   width: 100%;
   padding-top: 50px;
