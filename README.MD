@@ -2,9 +2,11 @@
 
 ![CI](https://github.com/crrmacarse/crrmacarse.github.io/workflows/CI/badge.svg?branch=source) ![Release](https://github.com/crrmacarse/crrmacarse.github.io/workflows/Release/badge.svg?branch=source)
 
-This project was initiated to showcase my capability and knowledge with web development(especially Javascript libraries). A carefully
+This 5+ year old project was initiated to showcase my capability and knowledge with web development(especially Javascript libraries). A carefully
 written typescript application from scratch. This is linted, test-driven, and strictly structured with scalability and optimization in mind.
 Go check it out and feel free to experiment!
+
+> This is already a v2 project. v1 Can be found in the branch
 
 ## Overview
 
@@ -38,14 +40,30 @@ Initializing the project:
 bash ./initialize.sh
 ```
 
+### V1
+
+```bash
+// Run Development
+npm run hot
+
+// Run Production
+npm run prod
+
+// Run production
+npm run start:prod
+```
+
 ### V2
 
 ```bash
 // Run Development
 npm run start:dev
 
-// Run Production
+// Build production
 npm run build
+
+// Run production
+npm run start:prod
 ```
 
 ---
