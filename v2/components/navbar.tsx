@@ -48,6 +48,9 @@ const Navbar = ({
 
   const renderPriorityButtons = (
     <Fragment>
+      <Link className="lg:mx-3 my-2 lg:my-0 cursor-pointer text-sm select-none" target='_blank' to="http://crrmacarse.github.io/portfolio-v1">
+        Check v1.12.2
+      </Link>
       <ChangeLanguage className="lg:mx-3 my-2 lg:my-0 cursor-pointer text-sm select-none uppercase" />
       <div id="theme-toggler" title="Switch Theme" className="mx-3 my-2 lg:my-0 cursor-pointer" role="button" aria-label="Switch to Dark Mode" tabIndex={-1} onClick={toggleTheme} onKeyDown={toggleTheme}>
         {!visited && isFirstTime && <Blinker title="Try the opposite theme!" />}
