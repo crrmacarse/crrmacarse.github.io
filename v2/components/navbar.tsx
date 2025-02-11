@@ -41,6 +41,9 @@ const Navbar = ({
     <Fragment>
       <Link {...navbarRepetetiveProps} to={ROUTES.PORTFOLIO}>{t('Portfolio')}</Link>
       <Link {...navbarRepetetiveProps} to={ROUTES.RESUME}>{t('Resume')}</Link>
+      <Link className={`cursor-pointer text-sm select-none ${navbarRepetetiveProps.className.replace('lg:inline-block', '')} md:hidden`} target='_blank' to="http://crrmacarse.github.io/portfolio-v1">
+        Check v1.12.2
+      </Link>
     </Fragment>
   );
 
@@ -48,7 +51,7 @@ const Navbar = ({
 
   const renderPriorityButtons = (
     <Fragment>
-      <Link className="lg:mx-3 my-2 lg:my-0 cursor-pointer text-sm select-none" target='_blank' to="http://crrmacarse.github.io/portfolio-v1">
+      <Link className="lg:mx-3 my-2 lg:my-0 cursor-pointer text-sm select-none hidden md:block" target='_blank' to="http://crrmacarse.github.io/portfolio-v1">
         Check v1.12.2
       </Link>
       <ChangeLanguage className="lg:mx-3 my-2 lg:my-0 cursor-pointer text-sm select-none uppercase" />
